@@ -267,7 +267,7 @@ function SolarisPage() {
               </div>
             </div>
 
-            <figure className="surface-ink relative overflow-hidden">
+            <figure className="surface-ink relative overflow-hidden md:max-h-[620px]">
               <img
                 src={heroImg}
                 alt="Sarkar Solaris perfume bottle in a dark cinematic setting with golden light"
@@ -587,7 +587,7 @@ function SolarisPage() {
                   key={p.name}
                   className="w-[72vw] shrink-0 snap-start border border-border sm:w-[46vw] lg:w-[calc((100%-3rem)/4)]"
                 >
-                  <div className="bg-card">
+                  <div className="bg-background">
                     <img
                       src={p.image}
                       alt={`Sarkar ${p.name} perfume bottle`}
