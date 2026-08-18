@@ -103,9 +103,9 @@ function Solaris() {
           <img
             src={bottle.url}
             alt="Sarkar Solaris parfum in the existing Sarkar chess-king flacon, tinted warm golden amber"
-            className="shadow-solaris mx-auto w-full max-w-md"
-            width={1024}
-            height={1024}
+            className="mx-auto w-full max-w-[300px] drop-shadow-[0_40px_80px_oklch(0.72_0.15_72/0.35)]"
+            width={318}
+            height={774}
           />
           <figcaption className="mt-4 text-center text-[0.65rem] uppercase tracking-[0.28em] text-muted-foreground">
             Existing Sarkar flacon · Amber variant tint
