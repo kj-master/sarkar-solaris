@@ -155,3 +155,34 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+  }
+}
+
+@utility text-gradient-solaris {
+  background-image: var(--gradient-solaris);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility halo {
+  background-image: var(--gradient-halo);
+}
+
+@utility shadow-solaris {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility rule-gold {
+  height: 1px;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
