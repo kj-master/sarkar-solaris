@@ -188,7 +188,7 @@ function SolarisPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
           <Link
             to="/perfumes/solaris"
-            className="font-display text-base font-500 tracking-[0.42em] text-ink"
+            className="font-display text-base font-medium tracking-[0.42em] text-ink"
             aria-label="SARKAR home"
           >
             SARKAR
@@ -238,7 +238,7 @@ function SolarisPage() {
               <p className="text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
                 The Sarkar Range
               </p>
-              <h1 className="mt-5 font-display text-5xl font-300 leading-[0.95] tracking-tight text-ink md:text-7xl">
+              <h1 className="mt-5 font-display text-5xl font-light leading-[0.95] tracking-tight text-ink md:text-7xl">
                 Sarkar Solaris
               </h1>
               <p className="mt-5 text-[0.66rem] uppercase tracking-[0.36em] text-gold">
@@ -299,7 +299,7 @@ function SolarisPage() {
               <p className="text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
                 The Story
               </p>
-              <h2 className="mt-5 font-display text-3xl font-300 leading-tight text-ink md:text-4xl">
+              <h2 className="mt-5 font-display text-3xl font-light leading-tight text-ink md:text-4xl">
                 Power, In a Warmer Light
               </h2>
               <div className="rule-gold my-6 w-24" />
@@ -320,7 +320,7 @@ function SolarisPage() {
         <section className="border-b border-border bg-card">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:gap-20 md:px-8 md:py-24">
             <article>
-              <h2 className="font-display text-2xl font-300 leading-tight text-ink md:text-3xl">
+              <h2 className="font-display text-2xl font-light leading-tight text-ink md:text-3xl">
                 What Solaris Smells Like
               </h2>
               <div className="rule-gold my-6 w-20" />
@@ -343,7 +343,7 @@ function SolarisPage() {
             </article>
 
             <article>
-              <h2 className="font-display text-2xl font-300 leading-tight text-ink md:text-3xl">
+              <h2 className="font-display text-2xl font-light leading-tight text-ink md:text-3xl">
                 Made for the Moments That Matter
               </h2>
               <div className="rule-gold my-6 w-20" />
@@ -376,7 +376,7 @@ function SolarisPage() {
               <p className="text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
                 Composition
               </p>
-              <h2 className="mt-4 font-display text-3xl font-300 leading-tight text-ink md:text-4xl">
+              <h2 className="mt-4 font-display text-3xl font-light leading-tight text-ink md:text-4xl">
                 The Fragrance Notes
               </h2>
               <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
@@ -395,14 +395,14 @@ function SolarisPage() {
                       height={1280}
                       loading="lazy"
                       decoding="async"
-                      className="aspect-4/5 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                   <figcaption className="pt-6">
                     <p className="text-[0.58rem] uppercase tracking-[0.32em] text-gold">
                       {n.tier}
                     </p>
-                    <h3 className="mt-3 font-display text-2xl font-300 text-ink">{n.name}</h3>
+                    <h3 className="mt-3 font-display text-2xl font-light text-ink">{n.name}</h3>
                     <p className="mt-3 text-[0.62rem] uppercase tracking-[0.24em] text-muted-foreground">
                       {n.words.join(" · ")}
                     </p>
@@ -419,7 +419,7 @@ function SolarisPage() {
         {/* CAMPAIGN */}
         <section className="border-b border-border">
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-            <h2 className="font-display text-3xl font-300 leading-tight text-ink md:text-4xl">
+            <h2 className="font-display text-3xl font-light leading-tight text-ink md:text-4xl">
               The Solaris Campaign
             </h2>
             <div className="rule-gold my-6 w-24" />
@@ -433,7 +433,7 @@ function SolarisPage() {
                     height={960}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-4/3 w-full object-cover"
+                    className="aspect-[4/3] w-full object-cover"
                   />
                   <figcaption className="bg-background pt-3 text-[0.58rem] uppercase tracking-[0.28em] text-muted-foreground">
                     {c.caption}
@@ -463,7 +463,7 @@ function SolarisPage() {
               <p className="text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
                 Discover Solaris
               </p>
-              <h2 className="mt-4 font-display text-3xl font-300 leading-tight text-ink md:text-4xl">
+              <h2 className="mt-4 font-display text-3xl font-light leading-tight text-ink md:text-4xl">
                 Sarkar Solaris
               </h2>
               <p className="mt-3 text-[0.62rem] uppercase tracking-[0.28em] text-muted-foreground">
@@ -473,7 +473,7 @@ function SolarisPage() {
                 Vanilla • Sandalwood • Amber
               </p>
 
-              <p className="mt-8 font-display text-3xl font-300 text-ink">MRP ₹1,499</p>
+              <p className="mt-8 font-display text-3xl font-light text-ink">MRP ₹1,499</p>
               <p className="mt-1 text-xs font-light text-muted-foreground">
                 MRP incl. of all taxes
               </p>
@@ -521,7 +521,7 @@ function SolarisPage() {
         <section className="border-b border-border bg-card">
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
-              <h2 className="font-display text-3xl font-300 leading-tight text-ink md:text-4xl">
+              <h2 className="font-display text-3xl font-light leading-tight text-ink md:text-4xl">
                 What They Say
               </h2>
               <p className="text-[0.56rem] uppercase tracking-[0.28em] text-muted-foreground">
@@ -551,7 +551,7 @@ function SolarisPage() {
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
-                <h2 className="font-display text-3xl font-300 leading-tight text-ink md:text-4xl">
+                <h2 className="font-display text-3xl font-light leading-tight text-ink md:text-4xl">
                   Explore the Sarkar Range
                 </h2>
                 <p className="mt-3 max-w-md text-sm font-light text-muted-foreground">
@@ -599,7 +599,7 @@ function SolarisPage() {
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display text-base font-400 tracking-[0.2em] text-ink">
+                    <h3 className="font-display text-base font-normal tracking-[0.2em] text-ink">
                       {p.name}
                     </h3>
                     <p className="mt-2 text-[0.56rem] uppercase tracking-[0.24em] text-muted-foreground">
@@ -630,16 +630,16 @@ function SolarisPage() {
             className="absolute inset-0 h-full w-full object-cover opacity-45"
           />
           <div className="relative mx-auto max-w-3xl px-5 py-24 text-center md:px-8 md:py-32">
-            <h2 className="font-display text-3xl font-300 leading-tight text-white md:text-5xl">
+            <h2 className="font-display text-3xl font-light leading-tight text-background md:text-5xl">
               Power, In a Warmer Light.
             </h2>
-            <p className="mx-auto mt-5 max-w-lg text-sm font-light leading-relaxed text-white/70">
+            <p className="mx-auto mt-5 max-w-lg text-sm font-light leading-relaxed text-background/70">
               Discover Solaris — vanilla, sandalwood and amber in a quietly commanding trail.
             </p>
             <button
               type="button"
               onClick={() => scrollToId("buy")}
-              className="mt-9 min-h-11 bg-white px-10 text-[0.62rem] uppercase tracking-[0.28em] text-ink transition-opacity hover:opacity-85"
+              className="mt-9 min-h-11 bg-background px-10 text-[0.62rem] uppercase tracking-[0.28em] text-ink transition-opacity hover:opacity-85"
             >
               Buy Solaris
             </button>
