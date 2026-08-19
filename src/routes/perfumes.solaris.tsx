@@ -18,7 +18,9 @@ import regalImg from "@/assets/range-regal.webp";
 const TITLE = "Sarkar Solaris Perfume | Quiet. Golden. Commanding.";
 const DESCRIPTION =
   "Discover Sarkar Solaris, a warm fragrance of vanilla, sandalwood and amber — composed, golden and quietly commanding.";
-const URL_PATH = "/perfumes/solaris";
+const SITE_URL = "https://sarkar-solaris.lovable.app";
+const URL_PATH = `${SITE_URL}/perfumes/solaris`;
+const HERO_URL = `${SITE_URL}${heroImg}`;
 
 export const Route = createFileRoute("/perfumes/solaris")({
   head: () => ({
@@ -31,10 +33,15 @@ export const Route = createFileRoute("/perfumes/solaris")({
       { property: "og:type", content: "product" },
       { property: "og:url", content: URL_PATH },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: HERO_URL },
+      { name: "twitter:image", content: HERO_URL },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: URL_PATH }],
+    links: [
+      { rel: "canonical", href: URL_PATH },
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -45,7 +52,7 @@ export const Route = createFileRoute("/perfumes/solaris")({
           brand: { "@type": "Brand", name: "SARKAR" },
           category: "Eau de Parfum",
           description: DESCRIPTION,
-          image: heroImg,
+          image: HERO_URL,
           url: URL_PATH,
           offers: {
             "@type": "Offer",
