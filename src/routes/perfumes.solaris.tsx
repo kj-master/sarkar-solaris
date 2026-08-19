@@ -267,7 +267,7 @@ function SolarisPage() {
               </div>
             </div>
 
-            <figure className="surface-ink relative overflow-hidden md:max-h-[620px]">
+            <figure className="surface-ink relative flex items-center justify-center overflow-hidden">
               <img
                 src={heroImg}
                 alt="Sarkar Solaris perfume bottle in a dark cinematic setting with golden light"
@@ -275,7 +275,7 @@ function SolarisPage() {
                 height={1280}
                 fetchPriority="high"
                 decoding="async"
-                className="h-full w-full object-cover"
+                className="mx-auto h-auto max-h-[620px] w-full object-contain"
               />
             </figure>
           </div>
