@@ -67,7 +67,7 @@ const notes = [
     image: vanillaImg,
     alt: "Sarkar Solaris vanilla fragrance note — split vanilla pods lit by warm golden light",
     words: ["Warm", "Creamy", "Smooth"],
-    copy: "A creamy opening with no sugar in it — vanilla read as texture rather than sweetness.",
+    copy: "A creamy opening with no sugar in it, vanilla read as texture rather than sweetness.",
   },
   {
     tier: "Heart Notes",
@@ -242,11 +242,11 @@ function SolarisPage() {
                 Sarkar Solaris
               </h1>
               <p className="mt-5 text-[0.66rem] uppercase tracking-[0.36em] text-gold">
-                Quiet • Golden • Commanding
+                QUIET&nbsp;&nbsp;• RADIENT&nbsp;• COMMANDING
               </p>
               <div className="rule-gold my-7 w-32" />
               <p className="max-w-md text-sm font-light leading-relaxed text-muted-foreground">
-                Vanilla, sandalwood and amber come together in a warm, composed trail — a
+                Vanilla, sandalwood and amber come together in a warm, composed trail, a
                 radiant expression of power that never needs to announce itself.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
@@ -304,8 +304,8 @@ function SolarisPage() {
               </h2>
               <div className="rule-gold my-6 w-24" />
               <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
-                Sarkar has always spoken in absolutes. Solaris answers in a lower register —
-                the same command, carried by warmth instead of weight. Not loud power. Not
+                Sarkar has always spoken in absolutes. Solaris answers in a lower register.
+                The same command, carried by warmth instead of weight. Not loud power. Not
                 aggressive power. Quiet power, held in vanilla, sandalwood and amber.
               </p>
               <p className="mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
@@ -380,7 +380,7 @@ function SolarisPage() {
                 The Fragrance Notes
               </h2>
               <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
-                Three materials, nothing hidden behind them.
+                {"\n"}
               </p>
             </div>
 
@@ -420,7 +420,7 @@ function SolarisPage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
             <h2 className="font-display text-3xl font-light leading-tight text-ink md:text-4xl">
-              The Solaris Campaign
+              Solaris&nbsp;
             </h2>
             <div className="rule-gold my-6 w-24" />
             <div className="grid gap-4 sm:grid-cols-2">
@@ -634,7 +634,7 @@ function SolarisPage() {
               Power, In a Warmer Light.
             </h2>
             <p className="mx-auto mt-5 max-w-lg text-sm font-light leading-relaxed text-background/70">
-              Discover Solaris — vanilla, sandalwood and amber in a quietly commanding trail.
+              Discover Solaris - vanilla, sandalwood and amber in a quietly commanding trail.
             </p>
             <button
               type="button"
