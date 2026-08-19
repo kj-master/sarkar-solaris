@@ -295,8 +295,8 @@ function SolarisPage() {
               <img
                 src={lifestyleImg}
                 alt="Sarkar Solaris perfume on a dark marble table in an evening rooftop setting"
-                width={1280}
-                height={960}
+                width={1100}
+                height={821}
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -398,8 +398,8 @@ function SolarisPage() {
                     <img
                       src={n.image}
                       alt={n.alt}
-                      width={1024}
-                      height={1280}
+                      width={760}
+                      height={950}
                       loading="lazy"
                       decoding="async"
                       className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -436,8 +436,8 @@ function SolarisPage() {
                   <img
                     src={c.src}
                     alt={c.alt}
-                    width={1280}
-                    height={960}
+                    width={1100}
+                    height={821}
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover"
@@ -458,8 +458,8 @@ function SolarisPage() {
               <img
                 src={terraceImg}
                 alt="Sarkar Solaris perfume 100 ml bottle photographed at golden hour"
-                width={1280}
-                height={960}
+                width={1100}
+                height={821}
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -630,8 +630,8 @@ function SolarisPage() {
           <img
             src={nightImg}
             alt="Sarkar Solaris perfume bottle glowing in warm ambient light after dark"
-            width={1280}
-            height={960}
+            width={1100}
+            height={821}
             loading="lazy"
             decoding="async"
             className="absolute inset-0 h-full w-full object-cover opacity-45"
