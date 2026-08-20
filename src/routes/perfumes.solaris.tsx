@@ -285,11 +285,13 @@ function SolarisPage() {
             <figure className="surface-ink relative flex items-center justify-center overflow-hidden">
               <img
                 src={heroImg}
+                srcSet={`${heroImgSm} 640w, ${heroImg} 928w`}
+                sizes="(max-width: 767px) 100vw, 50vw"
                 alt="Sarkar Solaris perfume bottle in a dark cinematic setting with golden light"
-                width={1024}
-                height={1280}
+                width={928}
+                height={1152}
                 fetchPriority="high"
-                decoding="async"
+                decoding="sync"
                 className="mx-auto h-auto max-h-[620px] w-full object-contain"
               />
             </figure>
