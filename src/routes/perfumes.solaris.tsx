@@ -41,7 +41,14 @@ export const Route = createFileRoute("/perfumes/solaris")({
     ],
     links: [
       { rel: "canonical", href: URL_PATH },
-      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroImg,
+        imagesrcset: `${heroImgSm} 640w, ${heroImg} 928w`,
+        imagesizes: "(max-width: 767px) 100vw, 50vw",
+        fetchpriority: "high",
+      },
     ],
     scripts: [
       {
