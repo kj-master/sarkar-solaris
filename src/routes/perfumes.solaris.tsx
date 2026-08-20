@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 
 import heroImg from "@/assets/solaris-hero.webp";
+import heroImgSm from "@/assets/solaris-hero-640.webp";
 import terraceImg from "@/assets/solaris-terrace.webp";
 import interiorImg from "@/assets/solaris-interior.webp";
 import nightImg from "@/assets/solaris-night.webp";
