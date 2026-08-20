@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 
 import heroImg from "@/assets/solaris-hero.webp";
+import heroImgSm from "@/assets/solaris-hero-640.webp";
 import terraceImg from "@/assets/solaris-terrace.webp";
 import interiorImg from "@/assets/solaris-interior.webp";
 import nightImg from "@/assets/solaris-night.webp";
@@ -40,7 +41,14 @@ export const Route = createFileRoute("/perfumes/solaris")({
     ],
     links: [
       { rel: "canonical", href: URL_PATH },
-      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroImg,
+        imagesrcset: `${heroImgSm} 640w, ${heroImg} 928w`,
+        imagesizes: "(max-width: 767px) 100vw, 50vw",
+        fetchpriority: "high",
+      },
     ],
     scripts: [
       {
@@ -277,11 +285,13 @@ function SolarisPage() {
             <figure className="surface-ink relative flex items-center justify-center overflow-hidden">
               <img
                 src={heroImg}
+                srcSet={`${heroImgSm} 640w, ${heroImg} 928w`}
+                sizes="(max-width: 767px) 100vw, 50vw"
                 alt="Sarkar Solaris perfume bottle in a dark cinematic setting with golden light"
-                width={1024}
-                height={1280}
+                width={928}
+                height={1152}
                 fetchPriority="high"
-                decoding="async"
+                decoding="sync"
                 className="mx-auto h-auto max-h-[620px] w-full object-contain"
               />
             </figure>
