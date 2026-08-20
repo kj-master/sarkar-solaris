@@ -199,7 +199,7 @@ function SolarisPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-border bg-background/90 md:backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
           <Link
             to="/perfumes/solaris"
@@ -291,7 +291,7 @@ function SolarisPage() {
                 width={928}
                 height={1152}
                 fetchPriority="high"
-                decoding="sync"
+                decoding="async"
                 className="mx-auto h-auto max-h-[620px] w-full object-contain"
               />
             </figure>
