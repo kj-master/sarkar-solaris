@@ -126,3 +126,67 @@
     display: none;
   }
 }
+
+/* SARKAR JOURNAL — editorial article typography */
+.journal-prose {
+  color: var(--muted-foreground);
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+.journal-prose > * + * {
+  margin-top: 1.15rem;
+}
+.journal-prose h2 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-top: 3rem;
+}
+.journal-prose h3 {
+  color: var(--ink);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  margin-top: 2rem;
+}
+.journal-prose a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1px;
+}
+.journal-prose ul,
+.journal-prose ol {
+  padding-left: 1.1rem;
+}
+.journal-prose li {
+  margin-top: 0.5rem;
+}
+.journal-prose ul li {
+  list-style: disc;
+}
+.journal-prose ol li {
+  list-style: decimal;
+}
+.journal-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.journal-prose th,
+.journal-prose td {
+  border: 1px solid var(--border);
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+.journal-prose th {
+  color: var(--ink);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.6rem;
+}
