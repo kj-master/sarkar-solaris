@@ -227,12 +227,19 @@ function SolarisPage() {
             >
               Solaris
             </Link>
+            <Link
+              to="/blog"
+              className="text-[0.62rem] font-light uppercase tracking-[0.28em] text-muted-foreground transition-colors hover:text-ink"
+            >
+              Journal
+            </Link>
             <a
               href="https://www.sarkar.store/pages/know-sarkar"
               className="text-[0.62rem] font-light uppercase tracking-[0.28em] text-muted-foreground transition-colors hover:text-ink"
             >
               Know Sarkar
             </a>
+
           </nav>
           <button
             type="button"
