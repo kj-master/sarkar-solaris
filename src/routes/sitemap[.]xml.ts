@@ -3,6 +3,14 @@ import type {} from "@tanstack/react-start";
 
 const BASE_URL = "https://sarkar-solaris.lovable.app";
 
+const postSlugs = [
+  "how-to-choose-the-right-perfume",
+  "eau-de-parfum-vs-eau-de-toilette-vs-attar",
+  "best-perfumes-for-evening-wear",
+  "fragrance-layering-guide",
+];
+
+
 interface SitemapEntry {
   path: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
@@ -15,7 +23,14 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/perfumes/solaris", changefreq: "weekly", priority: "1.0" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          ...postSlugs.map((slug) => ({
+            path: `/blog/${slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.7",
+          })),
         ];
+
 
         const urls = entries.map((e) =>
           [
