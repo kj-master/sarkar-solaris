@@ -7,6 +7,8 @@ const TITLE = "Sarkar Journal | Perfume & Fragrance Guides";
 const DESCRIPTION =
   "Fragrance guides from the Sarkar Journal — choosing a perfume, understanding concentrations, evening wear and the art of layering.";
 const URL_PATH = `${SITE_URL}/blog`;
+const OG_IMAGE = `${SITE_URL}${posts[2]?.image ?? ""}`;
+
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -18,11 +20,11 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: URL_PATH },
-      { property: "og:image", content: `${SITE_URL}${posts[2].image}` },
+      { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
-      { name: "twitter:image", content: `${SITE_URL}${posts[2].image}` },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [{ rel: "canonical", href: URL_PATH }],
     scripts: [

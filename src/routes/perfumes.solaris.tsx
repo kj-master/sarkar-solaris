@@ -704,6 +704,12 @@ function SolarisPage() {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" className="text-xs font-light text-ink">
+                  The Sarkar Journal
+                </Link>
+              </li>
+
+              <li>
                 <a
                   href="https://www.sarkar.store/pages/know-sarkar"
                   className="text-xs font-light text-ink"

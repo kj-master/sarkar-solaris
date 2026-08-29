@@ -190,3 +190,12 @@
   letter-spacing: 0.16em;
   font-size: 0.6rem;
 }
+.journal-prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.journal-prose td,
+.journal-prose th {
+  min-width: 7.5rem;
+}

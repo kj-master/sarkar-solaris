@@ -23,7 +23,7 @@ function ChoosePerfume() {
 
       <h2>Why the best perfume is a personal decision</h2>
       <p>
-        Fragrance is one of the few products that changes after you buy it. The same
+        Fragrance changes after you buy it. The same
         composition can read warm on one person and sharp on another, because scent
         develops in contact with skin — its temperature, its oils, its pH. A perfume that
         someone else wears beautifully is not evidence that it will suit you. It is only
@@ -122,11 +122,11 @@ function ChoosePerfume() {
         Cold air holds it close, which is why warm amber and woody compositions come into
         their own after sundown and through winter. Offices favour restraint; evenings allow
         depth. If you want to go further on the second point, read our guide to{" "}
-        <Link to="/blog/best-perfumes-for-evening-wear">
+        <Link to="/blog/$slug" params={{ slug: "best-perfumes-for-evening-wear" }}>
           choosing a fragrance for evening wear
         </Link>
         , and if the eau de parfum and eau de toilette labels are still unclear, our{" "}
-        <Link to="/blog/eau-de-parfum-vs-eau-de-toilette-vs-attar">
+        <Link to="/blog/$slug" params={{ slug: "eau-de-parfum-vs-eau-de-toilette-vs-attar" }}>
           guide to fragrance concentrations
         </Link>{" "}
         explains what actually differs.
@@ -275,11 +275,11 @@ function Concentrations() {
       </p>
       <p>
         If you are still deciding between families, our guide to{" "}
-        <Link to="/blog/how-to-choose-the-right-perfume">
+        <Link to="/blog/$slug" params={{ slug: "how-to-choose-the-right-perfume" }}>
           choosing a perfume for your personality and skin
         </Link>{" "}
         is the natural next step, and{" "}
-        <Link to="/blog/fragrance-layering-guide">fragrance layering</Link> explains how an
+        <Link to="/blog/$slug" params={{ slug: "fragrance-layering-guide" }}>fragrance layering</Link> explains how an
         attar and an eau de parfum can work together rather than compete.
       </p>
     </>
@@ -380,11 +380,11 @@ function EveningWear() {
       </p>
       <p>
         For a broader framework on matching scent to skin and temperament, read{" "}
-        <Link to="/blog/how-to-choose-the-right-perfume">
+        <Link to="/blog/$slug" params={{ slug: "how-to-choose-the-right-perfume" }}>
           how to choose the right perfume for your personality
         </Link>
         , or learn{" "}
-        <Link to="/blog/fragrance-layering-guide">how layering extends a fragrance</Link> across a
+        <Link to="/blog/$slug" params={{ slug: "fragrance-layering-guide" }}>how layering extends a fragrance</Link> across a
         long night. The best perfume for evening wear is simply the one that still feels like you
         at the end of it —{" "}
         <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
@@ -493,11 +493,11 @@ function Layering() {
         sandalwood and amber, an eau de parfum at 100 ml — layers cleanly over a sandalwood base
         because the materials already overlap. If the format terminology is unfamiliar, our guide
         to{" "}
-        <Link to="/blog/eau-de-parfum-vs-eau-de-toilette-vs-attar">
+        <Link to="/blog/$slug" params={{ slug: "eau-de-parfum-vs-eau-de-toilette-vs-attar" }}>
           eau de parfum, eau de toilette and attar
         </Link>{" "}
         covers it, and{" "}
-        <Link to="/blog/how-to-choose-the-right-perfume">
+        <Link to="/blog/$slug" params={{ slug: "how-to-choose-the-right-perfume" }}>
           how to choose a perfume for your skin type
         </Link>{" "}
         explains why the same routine performs differently on different people.
