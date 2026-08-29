@@ -1,11 +1,58 @@
 import { Link } from "@tanstack/react-router";
 
+import nobleImg from "@/assets/range-noble.webp";
+import orionImg from "@/assets/range-orion.webp";
+import regalImg from "@/assets/range-regal.webp";
+import throneImg from "@/assets/range-throne.webp";
+
 const range = [
-  { name: "THRONE", href: "https://www.sarkar.store/products/throne" },
-  { name: "ORION", href: "https://www.sarkar.store/products/orion" },
-  { name: "NOBLE", href: "https://www.sarkar.store/products/noble" },
-  { name: "REGAL", href: "https://www.sarkar.store/products/regal" },
+  { name: "THRONE", href: "https://www.sarkar.store/products/throne", image: throneImg },
+  { name: "ORION", href: "https://www.sarkar.store/products/orion", image: orionImg },
+  { name: "NOBLE", href: "https://www.sarkar.store/products/noble", image: nobleImg },
+  { name: "REGAL", href: "https://www.sarkar.store/products/regal", image: regalImg },
 ];
+
+export const rangeProducts = range;
+
+export function RangeStrip({
+  title = "Explore the Sarkar range",
+  note = "Throne, Orion, Noble and Regal — the parfums Solaris joins.",
+}: {
+  title?: string;
+  note?: string;
+}) {
+  return (
+    <section className="border-t border-border">
+      <div className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-16">
+        <h2 className="font-display text-2xl font-light text-ink md:text-3xl">{title}</h2>
+        <div className="rule-gold my-6 w-20" />
+        <p className="max-w-lg text-sm font-light leading-relaxed text-muted-foreground">
+          {note}
+        </p>
+        <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {range.map((p) => (
+            <li key={p.name} className="border border-border bg-card">
+              <a href={p.href} className="block p-4">
+                <img
+                  src={p.image}
+                  alt={`Sarkar ${p.name.charAt(0) + p.name.slice(1).toLowerCase()} parfum bottle`}
+                  width={700}
+                  height={700}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-square w-full bg-background object-contain"
+                />
+                <p className="mt-4 text-[0.58rem] uppercase tracking-[0.28em] text-ink">
+                  {p.name}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
 
 const navLink =
   "text-[0.62rem] font-light uppercase tracking-[0.28em] text-muted-foreground transition-colors hover:text-ink";
