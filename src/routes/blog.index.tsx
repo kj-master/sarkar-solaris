@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, RangeStrip } from "@/components/site-chrome";
 import { posts, SITE_URL } from "@/content/blog";
 
-const TITLE = "Sarkar Journal | Perfume & Fragrance Guides";
+const TITLE = "Sarkar Blogs | Perfume & Fragrance Guides";
 const DESCRIPTION =
-  "Fragrance guides from the Sarkar Journal — choosing a perfume, understanding concentrations, evening wear and the art of layering.";
+  "Fragrance guides from the Sarkar Blog — choosing a perfume, understanding concentrations, evening wear and the art of layering.";
 const URL_PATH = `${SITE_URL}/blog`;
 const OG_IMAGE = `${SITE_URL}${posts[2]?.image ?? ""}`;
 
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/blog/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: "The Sarkar Journal",
+          name: "The Sarkar Blog",
           description: DESCRIPTION,
           url: URL_PATH,
           publisher: { "@type": "Organization", name: "Sarkar", url: SITE_URL },
@@ -53,7 +53,7 @@ export const Route = createFileRoute("/blog/")({
 function BlogIndex() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteHeader active="journal" />
+      <SiteHeader active="blog" />
 
       <main>
         <section className="border-b border-border">
@@ -62,7 +62,7 @@ function BlogIndex() {
               Editorial
             </p>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-light leading-[1.05] tracking-tight text-ink md:text-6xl">
-              The Sarkar Journal
+              The Sarkar Blog
             </h1>
             <div className="rule-gold my-7 w-32" />
             <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
@@ -119,6 +119,7 @@ function BlogIndex() {
             </div>
           </div>
         </section>
+        <RangeStrip />
       </main>
 
       <SiteFooter />

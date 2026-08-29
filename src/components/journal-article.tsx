@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, RangeStrip } from "@/components/site-chrome";
 import { posts, type BlogPost, SITE_URL, SHOP_URL } from "@/content/blog";
 
 export function articleHead(post: BlogPost) {
@@ -61,7 +61,7 @@ export function JournalArticle({
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteHeader active="journal" />
+      <SiteHeader active="blog" />
 
       <main>
         <article>
@@ -76,7 +76,7 @@ export function JournalArticle({
                 <li aria-hidden>·</li>
                 <li>
                   <Link to="/blog" className="hover:text-ink">
-                    Journal
+                    Blogs
                   </Link>
                 </li>
                 <li aria-hidden>·</li>
@@ -142,7 +142,7 @@ export function JournalArticle({
         <section className="border-t border-border bg-card">
           <div className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
             <h2 className="font-display text-2xl font-light text-ink md:text-3xl">
-              Related from the Journal
+              Related reading
             </h2>
             <div className="rule-gold my-6 w-20" />
             <div className="grid gap-4 md:grid-cols-2">
@@ -177,6 +177,7 @@ export function JournalArticle({
             </div>
           </div>
         </section>
+        <RangeStrip />
       </main>
 
       <SiteFooter />

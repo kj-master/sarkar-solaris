@@ -57,7 +57,7 @@ export function RangeStrip({
 const navLink =
   "text-[0.62rem] font-light uppercase tracking-[0.28em] text-muted-foreground transition-colors hover:text-ink";
 
-export function SiteHeader({ active }: { active?: "solaris" | "journal" }) {
+export function SiteHeader({ active }: { active?: "solaris" | "blog" }) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 md:backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
@@ -83,9 +83,9 @@ export function SiteHeader({ active }: { active?: "solaris" | "journal" }) {
           </Link>
           <Link
             to="/blog"
-            className={active === "journal" ? navLink.replace("text-muted-foreground", "text-ink") : navLink}
+            className={active === "blog" ? navLink.replace("text-muted-foreground", "text-ink") : navLink}
           >
-            Journal
+            Blogs
           </Link>
           <a href="https://www.sarkar.store/pages/know-sarkar" className={navLink}>
             Know Sarkar
@@ -138,7 +138,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link to="/blog" className="text-xs font-light text-ink">
-                The Sarkar Journal
+                The Sarkar Blog
               </Link>
             </li>
           </ul>

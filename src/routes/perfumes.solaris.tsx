@@ -231,7 +231,7 @@ function SolarisPage() {
               to="/blog"
               className="text-[0.62rem] font-light uppercase tracking-[0.28em] text-muted-foreground transition-colors hover:text-ink"
             >
-              Journal
+              Blogs
             </Link>
             <a
               href="https://www.sarkar.store/pages/know-sarkar"
@@ -705,7 +705,7 @@ function SolarisPage() {
               </li>
               <li>
                 <Link to="/blog" className="text-xs font-light text-ink">
-                  The Sarkar Journal
+                  The Sarkar Blog
                 </Link>
               </li>
 
