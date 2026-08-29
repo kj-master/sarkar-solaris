@@ -705,7 +705,7 @@ function SolarisPage() {
               </li>
               <li>
                 <Link to="/blog" className="text-xs font-light text-ink">
-                  The Sarkar Blog
+                  Blogs
                 </Link>
               </li>
 
