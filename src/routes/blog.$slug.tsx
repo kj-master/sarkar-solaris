@@ -23,8 +23,7 @@ function ArticlePage() {
   const { post } = Route.useLoaderData();
   const Body = articleBodies[post.slug];
   return (
-    <JournalArticle post={post}>
-      <Body />
-    </JournalArticle>
+    <JournalArticle post={post}>{Body ? <Body /> : null}</JournalArticle>
   );
 }
+

@@ -7,6 +7,8 @@ const TITLE = "Sarkar Journal | Perfume & Fragrance Guides";
 const DESCRIPTION =
   "Fragrance guides from the Sarkar Journal — choosing a perfume, understanding concentrations, evening wear and the art of layering.";
 const URL_PATH = `${SITE_URL}/blog`;
+const OG_IMAGE = `${SITE_URL}${posts[2]?.image ?? ""}`;
+
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
