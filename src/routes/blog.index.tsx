@@ -62,7 +62,7 @@ function BlogIndex() {
               Editorial
             </p>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-light leading-[1.05] tracking-tight text-ink md:text-6xl">
-              The Sarkar Blog
+              Blogs
             </h1>
             <div className="rule-gold my-7 w-32" />
             <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
