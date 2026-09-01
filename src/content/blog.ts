@@ -5,9 +5,9 @@
  * the /blog listing page, the sitemap and the BlogPosting JSON-LD.
  */
 
-import chooseImg from "@/assets/note-sandalwood.webp";
-import concentrationImg from "@/assets/solaris-closeup.webp";
-import eveningImg from "@/assets/solaris-night.webp";
+import concentrationImg from "@/assets/sarkar-perfume-range-lineup.webp";
+import chooseImg from "@/assets/sarkar-perfume-range-personality.webp";
+import eveningImg from "@/assets/sarkar-solaris-regal-evening-perfume.webp";
 import layeringImg from "@/assets/solaris-interior.webp";
 
 export const SITE_URL = "https://sarkar-solaris.lovable.app";
