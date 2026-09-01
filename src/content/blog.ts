@@ -5,9 +5,9 @@
  * the /blog listing page, the sitemap and the BlogPosting JSON-LD.
  */
 
-import chooseImg from "@/assets/note-sandalwood.webp";
-import concentrationImg from "@/assets/solaris-closeup.webp";
-import eveningImg from "@/assets/solaris-night.webp";
+import concentrationImg from "@/assets/sarkar-perfume-range-lineup.webp";
+import chooseImg from "@/assets/sarkar-perfume-range-personality.webp";
+import eveningImg from "@/assets/sarkar-solaris-regal-evening-perfume.webp";
 import layeringImg from "@/assets/solaris-interior.webp";
 
 export const SITE_URL = "https://sarkar-solaris.lovable.app";
@@ -47,9 +47,9 @@ export const posts: BlogPost[] = [
     description:
       "A practical guide to finding the best perfume for your personality and skin type — fragrance families, testing, and building a signature scent.",
     excerpt:
-      "Fragrance families, skin chemistry and the quiet art of testing properly — how to find a scent that reads as yours.",
+      "Fragrance families, skin chemistry and five personality types, matched to Throne, Orion, Noble, Regal and Solaris.",
     category: "Fragrance Guide",
-    readingTime: "4 min read",
+    readingTime: "5 min read",
     primaryKeyword: "best perfume",
     secondaryKeywords: [
       "how to choose a perfume",
@@ -59,8 +59,8 @@ export const posts: BlogPost[] = [
     h2s: [
       "Why the best perfume is a personal decision",
       "Start with fragrance families",
-      "Let personality guide the register, not the rules",
       "Skin type changes everything",
+      "Five personality types and the Sarkar perfume that fits",
       "How to test a fragrance properly",
       "Finding a signature scent",
       "Occasion and season",
@@ -77,9 +77,9 @@ export const posts: BlogPost[] = [
     cta: "Discover the Sarkar collection.",
     image: chooseImg,
     imageAlt:
-      "Polished sandalwood blocks and shavings lit by warm golden light, a classic woody fragrance material",
+      "Sarkar Throne, Orion, Noble, Regal and Solaris perfume bottles grouped together under warm golden light",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-30",
     related: ["eau-de-parfum-vs-eau-de-toilette-vs-attar", "best-perfumes-for-evening-wear"],
   },
   {
@@ -89,7 +89,7 @@ export const posts: BlogPost[] = [
     description:
       "Eau de parfum, eau de toilette or attar? A clear guide to concentration, character and projection so you can choose by preference, not price.",
     excerpt:
-      "Concentration, character and projection explained — and how to choose between the three formats without defaulting to price.",
+      "Concentration, character and projection explained, plus where the Sarkar parfums sit and how to choose without defaulting to price.",
     category: "Fragrance Basics",
     readingTime: "4 min read",
     primaryKeyword: "eau de parfum",
@@ -103,6 +103,7 @@ export const posts: BlogPost[] = [
       "What eau de toilette means",
       "What attar means",
       "A side-by-side comparison",
+      "Where the Sarkar parfums sit",
       "Why concentration matters",
       "Choosing by preference rather than price",
     ],
@@ -115,12 +116,12 @@ export const posts: BlogPost[] = [
       label: "Britannica on perfume composition",
       href: "https://www.britannica.com/art/perfume",
     },
-    cta: "Meet Solaris — power, in a warmer light.",
+    cta: "Meet Solaris, power in a warmer light.",
     image: concentrationImg,
     imageAlt:
-      "Close-up of the Sarkar chess-king cap and golden amber eau de parfum glass",
+      "Sarkar Throne, Orion, Noble, Regal and Solaris parfum bottles lined up side by side on a dark surface",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-30",
     related: ["how-to-choose-the-right-perfume", "fragrance-layering-guide"],
   },
   {
@@ -128,9 +129,9 @@ export const posts: BlogPost[] = [
     h1: "Best Perfumes for Evening Wear: Fragrances That Leave an Impression",
     seoTitle: "Best Perfume for Evening Wear: A Guide",
     description:
-      "How to choose the best perfume for evening wear — warm, woody and amber profiles that create presence at dinners, weddings and late hours.",
+      "How to choose the best perfume for evening wear, with two Sarkar recommendations: Solaris for warmth and Regal for oud-led statement nights.",
     excerpt:
-      "Warm, woody and amber compositions, and why the hours after sundown ask something different of a fragrance.",
+      "Warm, woody and amber compositions, and the two Sarkar parfums built for the hours after sundown.",
     category: "Occasion",
     readingTime: "4 min read",
     primaryKeyword: "best perfume",
@@ -145,6 +146,7 @@ export const posts: BlogPost[] = [
       "Dinners, rooftops and dates",
       "Weddings and special occasions",
       "Projection and trail",
+      "Two Sarkar perfumes we recommend for evening wear",
       "Sophisticated rather than sweet",
     ],
     internalLinks: [
@@ -159,9 +161,9 @@ export const posts: BlogPost[] = [
     cta: "Find the fragrance that leaves your signature.",
     image: eveningImg,
     imageAlt:
-      "Sarkar Solaris perfume bottle in a dark evening setting with warm ambient light",
+      "Sarkar Solaris and Sarkar Regal perfume bottles together in a low-lit evening setting with warm amber light",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-30",
     related: ["how-to-choose-the-right-perfume", "fragrance-layering-guide"],
   },
   {
@@ -169,9 +171,9 @@ export const posts: BlogPost[] = [
     h1: "The Art of Fragrance Layering: How to Make Your Perfume Last All Day",
     seoTitle: "Fragrance Layering: Make Perfume Last Longer",
     description:
-      "A step-by-step guide to fragrance layering — complementary profiles, body products, pulse points and the mistakes that cut a scent short.",
+      "A guide to fragrance layering: what makes a perfume last, the long-wearing notes in every Sarkar parfum, and the habits that cut a scent short.",
     excerpt:
-      "A step-by-step method for building depth, from body products to pulse points — and the habits that quietly shorten a scent.",
+      "What actually makes a scent last, the long-wearing notes in each Sarkar parfum, and a simple layering routine.",
     category: "How-To",
     readingTime: "4 min read",
     primaryKeyword: "perfume and fragrances",
@@ -181,8 +183,9 @@ export const posts: BlogPost[] = [
       "how to make perfume last longer",
     ],
     h2s: [
+      "What makes a perfume last longer",
       "What fragrance layering means",
-      "Choosing complementary profiles",
+      "The long-wearing notes in each Sarkar perfume",
       "Build from the skin outward",
       "Where to apply",
       "How clothing, skin and weather change perfume and fragrances",
@@ -201,9 +204,9 @@ export const posts: BlogPost[] = [
     cta: "Discover the Sarkar collection.",
     image: layeringImg,
     imageAlt:
-      "Sarkar perfume bottle on dark wood in a sunlit interior, warm afternoon light",
+      "Sarkar parfum bottle on dark wood in a sunlit interior, warm afternoon light",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-30",
     related: ["how-to-choose-the-right-perfume", "eau-de-parfum-vs-eau-de-toilette-vs-attar"],
   },
 ];

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import { PerfumePickCards } from "@/components/perfume-picks";
 import { SHOP_URL } from "@/content/blog";
 
 function Ext({ href, children }: { href: string; children: ReactNode }) {
@@ -16,127 +17,109 @@ function ChoosePerfume() {
     <>
       <p>
         Finding the best perfume for yourself is less about chasing a bestseller list and
-        more about understanding three things: the families of scent you respond to, the
-        way your own skin behaves, and the register you want to speak in. Get those right
-        and the bottle almost chooses itself.
+        more about understanding three things: the families of scent you respond to, the way
+        your own skin behaves, and the personality you want the fragrance to speak for. Get
+        those right and the bottle almost chooses itself.
       </p>
 
       <h2>Why the best perfume is a personal decision</h2>
       <p>
-        Fragrance changes after you buy it. The same
-        composition can read warm on one person and sharp on another, because scent
-        develops in contact with skin — its temperature, its oils, its pH. A perfume that
-        someone else wears beautifully is not evidence that it will suit you. It is only
-        evidence that it is worth testing.
-      </p>
-      <p>
-        That is the shift worth making early: stop looking for a universally good perfume
-        and start looking for one that behaves well on you.
+        Fragrance changes after you buy it. The same composition can read warm on one person
+        and sharp on another, because scent develops in contact with skin, its temperature,
+        its oils and its pH. A perfume someone else wears beautifully is not evidence that it
+        will suit you. It is only evidence that it is worth testing.
       </p>
 
       <h2>Start with fragrance families</h2>
       <p>
-        Most fragrances sit within a handful of broad families, and knowing which ones
-        draw you in narrows the field quickly.
+        Most fragrances sit within a handful of broad families, and knowing which ones draw
+        you in narrows the field quickly.
       </p>
       <ul>
         <li>
-          <strong>Fresh and citrus</strong> — bergamot, lemon, neroli. Bright, clean, most
+          <strong>Fresh and citrus:</strong> bergamot, lemon, neroli. Bright, clean and most
           at home in daylight and heat.
         </li>
         <li>
-          <strong>Floral</strong> — rose, jasmine, iris. Ranges from delicate to opulent
-          depending on concentration.
+          <strong>Floral:</strong> rose, geranium, jasmine. Delicate or opulent depending on
+          concentration.
         </li>
         <li>
-          <strong>Woody</strong> — sandalwood, cedar, vetiver. Dry or creamy, grounded,
-          usually long-wearing.
+          <strong>Woody:</strong> sandalwood, cedarwood, vetiver. Dry or creamy, grounded and
+          usually long wearing.
         </li>
         <li>
-          <strong>Amber and oriental</strong> — amber, vanilla, resins and spice. Warm,
-          rich, built for cooler air and later hours.
+          <strong>Amber and warm:</strong> amber, vanilla, resins and spice. Rich, built for
+          cooler air and later hours.
         </li>
         <li>
-          <strong>Aromatic and oud</strong> — herbs, smoke, resinous depth. Distinctive and
+          <strong>Oud and leather:</strong> smoke, resin, animalic depth. Distinctive and
           often assertive.
         </li>
       </ul>
-      <p>
-        Note which of these you already gravitate towards in other things — the wood in a
-        room, the spice in a kitchen, the citrus in a soap. Preferences rarely arrive out of
-        nowhere.
-      </p>
-
-      <h2>Let personality guide the register, not the rules</h2>
-      <p>
-        Personality does not dictate a note list. It dictates volume. Someone who prefers to
-        be heard before being seen will be comfortable in a projecting oud or a loud
-        gourmand. Someone whose style is understated will want a composition that stays
-        closer to the skin and reveals itself only at conversational distance.
-      </p>
-      <p>
-        Ask what you want the fragrance to do in a room. Announce, accompany, or linger. That
-        single answer eliminates more bottles than any list of notes.
-      </p>
 
       <h2>Skin type changes everything</h2>
       <p>
-        Oily skin holds fragrance molecules well, so scents tend to last longer and project
-        more; rich amber and woody compositions can become intense faster than expected. Dry
-        skin releases fragrance quickly, which flatters bright citrus for a short while but
-        can cut a composition short — moisturising with an unscented lotion before applying
-        gives the perfume something to hold on to.
-      </p>
-      <p>
-        Warmer skin amplifies sweetness and spice. Cooler skin keeps compositions crisper and
-        more linear. Sensitive skin is a separate consideration: the{" "}
+        Oily skin holds fragrance molecules well, so scents last longer and project more, and
+        rich amber or leather compositions can become intense faster than expected. Dry skin
+        releases fragrance quickly, which flatters bright citrus briefly but cuts a
+        composition short, so moisturising with an unscented lotion first gives the perfume
+        something to hold on to. Warmer skin amplifies sweetness and spice, cooler skin keeps
+        compositions crisper. If your skin reacts easily, the{" "}
         <Ext href="https://ifrafragrance.org/">International Fragrance Association</Ext>{" "}
-        publishes the ingredient standards the industry works to, and applying to clothing
-        rather than skin is a reasonable adjustment if you react easily.
+        publishes the ingredient standards the industry formulates against, and applying to
+        clothing instead of skin is a reasonable adjustment.
+      </p>
+
+      <h2>Five personality types and the Sarkar perfume that fits</h2>
+      <p>
+        Personality does not dictate a note list. It dictates volume. Ask what you want the
+        fragrance to do in a room: announce, accompany or linger. The Sarkar range is a
+        useful way to see that mapped across five very different registers, all unisex and
+        all at 100 ml.
+      </p>
+
+      <PerfumePickCards keys={["solaris", "throne", "orion", "noble", "regal"]} />
+
+      <p>
+        If you are quiet but still command the room, with authority nobody has to be told
+        about, <Link to="/perfumes/solaris">Sarkar Solaris</Link> is the natural fit. If you
+        want to be remembered after you leave, Throne. If your days are busy and you want
+        something effortless, Orion. If your work is your statement, Noble. If the occasion is
+        the point, Regal.
       </p>
 
       <h2>How to test a fragrance properly</h2>
       <p>
         Paper strips show the opening and almost nothing else. Test on skin, one or two
-        fragrances at a time, and then leave. The first fifteen minutes are the alcohol and
-        the top notes burning off; the heart appears after roughly half an hour, and the base
-        after two to four hours. Judge at hour three, not minute three.
-      </p>
-      <p>
-        Avoid rubbing your wrists together — it bruises the top notes. And test on an
-        ordinary day rather than a scent-heavy one, so your nose is not already saturated.
+        fragrances at a time, and then leave. The first fifteen minutes are alcohol and top
+        notes burning off, the heart appears after roughly half an hour, and the base after
+        two to four hours. Judge at hour three, not minute three, and avoid rubbing your
+        wrists together because friction bruises the top notes.
       </p>
 
       <h2>Finding a signature scent</h2>
       <p>
         A signature scent is simply the composition you return to when you are not
-        experimenting. It usually shares a common thread across everything else you like — a
+        experimenting. It usually shares a common thread with everything else you like: a
         creamy wood, a particular sweetness, a specific dryness. Once you notice that thread,
-        build around it: one signature for most days, one or two alternates for weather and
-        occasion.
+        build around it, with one signature for most days and one or two alternates for
+        weather and occasion.
       </p>
 
       <h2>Occasion and season</h2>
       <p>
-        Heat lifts fragrance, so summer rewards lighter concentrations and fresher families.
-        Cold air holds it close, which is why warm amber and woody compositions come into
-        their own after sundown and through winter. Offices favour restraint; evenings allow
-        depth. If you want to go further on the second point, read our guide to{" "}
+        Heat lifts fragrance, so summer rewards fresher families such as Orion and Noble. Cold
+        air holds scent close, which is why the warmth of Solaris and the depth of Regal come
+        into their own after sundown. For more on that, read our guide to{" "}
         <Link to="/blog/$slug" params={{ slug: "best-perfumes-for-evening-wear" }}>
           choosing a fragrance for evening wear
         </Link>
-        , and if the eau de parfum and eau de toilette labels are still unclear, our{" "}
+        , and if the eau de parfum and attar labels are still unclear, our{" "}
         <Link to="/blog/$slug" params={{ slug: "eau-de-parfum-vs-eau-de-toilette-vs-attar" }}>
           guide to fragrance concentrations
         </Link>{" "}
         explains what actually differs.
-      </p>
-      <p>
-        Fragrance houses tend to offer distinct scent personalities rather than one house
-        style — Sarkar, for instance, spans fresh aromatic through smoky oud to the warm
-        vanilla-and-amber register of{" "}
-        <Link to="/perfumes/solaris">Sarkar Solaris</Link>. Use a range like that as a way to
-        test several families side by side.
       </p>
       <p>
         The best perfume, in the end, is the one that behaves well on your skin, matches the
@@ -144,7 +127,7 @@ function ChoosePerfume() {
         <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
           Discover the Sarkar collection
         </a>{" "}
-        and start with the family you already lean towards.
+        and start with the personality you recognise.
       </p>
     </>
   );
@@ -163,26 +146,21 @@ function Concentrations() {
       <h2>What eau de parfum actually means</h2>
       <p>
         Eau de parfum is a relatively high concentration of aromatic compounds diluted in
-        alcohol — typically the strongest of the everyday spray formats sold in retail. The
-        practical effect is not simply that it lasts. It is that the base notes matter more.
+        alcohol, typically the strongest of the everyday spray formats sold in retail. The
+        practical benefit is not simply that it lasts. It is that the base notes matter more.
         Woods, resins and amber have room to develop, so the fragrance moves from an opening
         through a heart and settles into something noticeably different from where it began.
-      </p>
-      <p>
-        That depth is why warm, woody and amber compositions are usually released as eau de
-        parfum. The structure needs the concentration to work.
+        That depth is why warm and woody compositions are usually released in this format.
       </p>
 
       <h2>What eau de toilette means</h2>
       <p>
         Eau de toilette carries a lower proportion of oil. It reads lighter and brighter, with
-        the top notes doing more of the work. Citrus, green and aquatic compositions often
-        suit it — those materials are volatile by nature and a lighter formulation lets them
-        shine rather than fighting a heavy base.
-      </p>
-      <p>
-        Lighter is not lesser. In humid Indian summers, an eau de toilette can be the more
-        wearable choice precisely because heat already amplifies whatever you apply.
+        the top notes doing more of the work. Citrus, green and aquatic compositions suit it,
+        because those materials are volatile by nature and a lighter formulation lets them
+        shine rather than fighting a heavy base. Lighter is not lesser. In humid Indian
+        summers it is often the more wearable choice, since heat already amplifies whatever
+        you apply. The benefit is comfort and freshness rather than staying power.
       </p>
 
       <h2>What attar means</h2>
@@ -190,13 +168,9 @@ function Concentrations() {
         Attar is the oldest of the three in this part of the world: concentrated fragrance oil
         with no alcohol, traditionally distilled and often carried in a sandalwood base.
         Applied in small amounts to pulse points, it sits very close to the skin and unfolds
-        slowly. There is no alcoholic opening blast — the character is present from the first
-        moment and changes gradually.
-      </p>
-      <p>
-        Attars are intimate rather than projecting. That makes them well suited to prayer,
-        quiet gatherings and anyone who prefers scent discovered at close range. They also
-        layer unusually well under a spray fragrance.
+        slowly, with no alcoholic opening blast. Attars are intimate rather than projecting,
+        which suits prayer, quiet gatherings and anyone who prefers scent discovered at close
+        range. They also layer unusually well under a spray fragrance.
       </p>
 
       <h2>A side-by-side comparison</h2>
@@ -214,7 +188,7 @@ function Concentrations() {
             <th>Base</th>
             <td>Alcohol</td>
             <td>Alcohol</td>
-            <td>Oil, alcohol-free</td>
+            <td>Oil, alcohol free</td>
           </tr>
           <tr>
             <th>Concentration</th>
@@ -225,8 +199,8 @@ function Concentrations() {
           <tr>
             <th>Character</th>
             <td>Rounded, develops in stages</td>
-            <td>Bright, top-note led</td>
-            <td>Dense, gradual, skin-close</td>
+            <td>Bright, top note led</td>
+            <td>Dense, gradual, skin close</td>
           </tr>
           <tr>
             <th>Projection</th>
@@ -235,29 +209,41 @@ function Concentrations() {
             <td>Close to the skin</td>
           </tr>
           <tr>
+            <th>Main benefit</th>
+            <td>Depth and longevity</td>
+            <td>Comfort in heat</td>
+            <td>Intimacy and layering</td>
+          </tr>
+          <tr>
             <th>Typical use</th>
             <td>Evenings, occasions, cooler weather</td>
-            <td>Daytime, work, heat</td>
+            <td>Daytime, work, humidity</td>
             <td>Rituals, close settings, layering</td>
           </tr>
         </tbody>
       </table>
 
+      <h2>Where the Sarkar parfums sit</h2>
+      <p>
+        Sarkar builds at parfum strength across the range, which is why each fragrance is
+        described by character rather than by label. Orion is the fresh, citrus led one for
+        workdays. Noble is crisp eucalyptus and pepper over cedarwood for offices and first
+        impressions. Throne is cardamom into leather and vanilla for late nights. Regal is
+        oud, saffron and amber for weddings and black tie. Solaris is the warm one, vanilla,
+        sandalwood and amber, at MRP ₹1,499 for 100 ml.
+      </p>
+
+      <PerfumePickCards keys={["orion", "noble", "throne", "regal"]} />
+
       <h2>Why concentration matters</h2>
       <p>
         Concentration decides which part of the composition you actually experience. A low
-        concentration foregrounds volatile top notes; a high one gives the heart and base time
-        to appear. Perfumers build around that — the same accord can be composed differently
-        depending on the intended format. For a broader view of how compositions are
-        structured, <Ext href="https://www.britannica.com/art/perfume">Britannica</Ext> gives a
-        clear historical and technical overview.
-      </p>
-      <p>
-        Concentration also affects how much you should apply. A heavier formulation needs fewer
-        sprays, not more, and over-application is the most common reason a good fragrance
-        becomes tiring by mid-evening. Longevity depends on the materials, your skin and the
-        weather as much as on the label, so treat concentration as a guide to character rather
-        than a promise of hours.
+        concentration foregrounds volatile top notes, a high one gives the heart and base time
+        to appear. For a broader view of how compositions are structured,{" "}
+        <Ext href="https://www.britannica.com/art/perfume">Britannica</Ext> gives a clear
+        historical and technical overview. Concentration also affects how much you should
+        apply: a heavier formulation needs fewer sprays, and over application is the most
+        common reason a good fragrance becomes tiring by mid evening.
       </p>
 
       <h2>Choosing by preference rather than price</h2>
@@ -268,19 +254,18 @@ function Concentrations() {
         the composition is warm and you want it to hold through an evening.
       </p>
       <p>
-        Sarkar Solaris is positioned as an eau de parfum for exactly that reason — vanilla,
-        sandalwood and amber need the concentration to move through their stages properly. You
-        can see how that composition is built on the{" "}
-        <Link to="/perfumes/solaris">Sarkar Solaris page</Link>.
-      </p>
-      <p>
-        If you are still deciding between families, our guide to{" "}
+        <Link to="/perfumes/solaris">Sarkar Solaris</Link> is positioned as an eau de parfum
+        for exactly that reason, because vanilla, sandalwood and amber need the concentration
+        to move through their stages properly. If you are still deciding between families, our
+        guide to{" "}
         <Link to="/blog/$slug" params={{ slug: "how-to-choose-the-right-perfume" }}>
           choosing a perfume for your personality and skin
         </Link>{" "}
         is the natural next step, and{" "}
-        <Link to="/blog/$slug" params={{ slug: "fragrance-layering-guide" }}>fragrance layering</Link> explains how an
-        attar and an eau de parfum can work together rather than compete.
+        <Link to="/blog/$slug" params={{ slug: "fragrance-layering-guide" }}>
+          fragrance layering
+        </Link>{" "}
+        explains how an attar and an eau de parfum work together rather than compete.
       </p>
     </>
   );
@@ -291,92 +276,91 @@ function EveningWear() {
     <>
       <p>
         The best perfume for an evening is rarely the one you wore that morning. Light,
-        temperature and setting all change after sundown, and a composition chosen for a bright
-        working day tends to disappear precisely when you want it to hold. Evening fragrance is
-        a different brief: warmth, depth, and presence that does not demand attention.
+        temperature and setting all change after sundown, and a composition chosen for a
+        bright working day tends to disappear precisely when you want it to hold. Evening
+        fragrance is a different brief: warmth, depth and presence that does not demand
+        attention.
       </p>
 
       <h2>Why the best perfume for evening differs from a daytime scent</h2>
       <p>
-        Heat lifts fragrance off the skin quickly. Cool air does the opposite — it holds a scent
-        close and lets the heavier materials read clearly. That is why citrus and aquatic
-        compositions feel right at noon and thin by nine, while resins, woods and amber only
-        come into focus once the temperature drops.
-      </p>
-      <p>
-        Evening settings are also closer. Dinner tables, low-lit rooms and gatherings put people
-        within a metre of each other, which rewards nuance over projection.
+        Heat lifts fragrance off the skin quickly. Cool air does the opposite, holding a scent
+        close and letting the heavier materials read clearly. That is why citrus and aquatic
+        compositions feel right at noon and thin by nine, while resins, woods, leather and
+        amber only come into focus once the temperature drops. Evening settings are also
+        closer, and dinner tables and low lit rooms reward nuance over projection.
       </p>
 
       <h2>The profiles that suit the hours after sundown</h2>
       <ul>
         <li>
-          <strong>Amber</strong> — golden, resinous depth that gives a composition its length.
+          <strong>Amber:</strong> golden, resinous depth that gives a composition its length.
         </li>
         <li>
-          <strong>Woody</strong> — sandalwood and cedar bring structure and keep sweetness in
-          check.
+          <strong>Woody:</strong> sandalwood and cedarwood bring structure and keep sweetness
+          in check.
         </li>
         <li>
-          <strong>Warm gourmand</strong> — vanilla read as texture rather than sugar.
+          <strong>Oud and leather:</strong> dark, unhurried materials made for formal nights.
         </li>
         <li>
-          <strong>Spiced</strong> — a touch of warmth that adds dimension without heat.
+          <strong>Warm gourmand:</strong> vanilla read as texture rather than sugar.
         </li>
       </ul>
-      <p>
-        The common thread is temperature. Evening compositions feel warm, and warmth is what
-        makes a scent register as considered rather than casual.
-      </p>
 
       <h2>Dinners, rooftops and dates</h2>
       <p>
-        At a dinner table, restraint matters more than richness. A fragrance competing with food
-        is a fragrance applied too heavily — two sprays, placed low, is usually enough. Rooftop
-        evenings are the opposite problem: open air disperses scent, and a composition with an
-        amber or woody base holds where a lighter one vanishes.
-      </p>
-      <p>
-        For a date, choose something that only becomes apparent at close range. A trail that
-        arrives before you do is a different, louder statement than most evenings call for.
+        At a dinner table, restraint matters more than richness. A fragrance competing with
+        food is a fragrance applied too heavily, and two sprays placed low is usually enough.
+        Rooftop evenings are the opposite problem, because open air disperses scent and a
+        composition with an amber or oud base holds where a lighter one vanishes. For a date,
+        choose something that only becomes apparent at close range.
       </p>
 
       <h2>Weddings and special occasions</h2>
       <p>
-        Indian weddings are long, warm and crowded — three conditions that punish over-application
-        and reward a composition with a real base. Something built on sandalwood and amber will
-        still be recognisable hours in, while a bright opening will have gone by the time the
-        evening properly begins. Apply once before leaving and resist re-application; in a full
-        room, less is genuinely more.
+        Indian weddings are long, warm and crowded, three conditions that punish over
+        application and reward a composition with a real base. Something built on sandalwood,
+        amber or oud will still be recognisable hours in, while a bright opening will have
+        gone by the time the evening properly begins. Apply once before leaving and resist re
+        application, because in a full room less is genuinely more.
       </p>
 
       <h2>Projection and trail</h2>
       <p>
-        Projection is how far a fragrance travels; trail is what remains after you have moved on.
-        A good evening scent keeps projection moderate and trail long. That combination creates
-        presence without imposing it — people notice the fragrance when they are near you, and
-        remember it after.
+        Projection is how far a fragrance travels, trail is what remains after you have moved
+        on. A good evening scent keeps projection moderate and trail long, which creates
+        presence without imposing it. Application controls this more than the bottle does, so
+        use pulse points at the neck and wrists on moisturised skin rather than a cloud
+        sprayed over clothing.
       </p>
+
+      <h2>Two Sarkar perfumes we recommend for evening wear</h2>
       <p>
-        Application controls this more than the bottle does. Pulse points at the neck and wrists,
-        applied to moisturised skin, produce a steadier release than a cloud sprayed over
-        clothing.
+        Two fragrances in the Sarkar range are built for these hours, and they answer the
+        brief from opposite directions: one warm and composed, the other dark and formal.
+      </p>
+
+      <PerfumePickCards keys={["solaris", "regal"]} />
+
+      <p>
+        Choose <Link to="/perfumes/solaris">Sarkar Solaris</Link> for dinners, dates and
+        evenings where you want warmth and quiet authority rather than a statement. The
+        vanilla reads as texture, the sandalwood keeps it composed and the amber carries it
+        through the night, at MRP ₹1,499 for 100 ml. Choose Sarkar Regal when the occasion is
+        formal, because oud, saffron, amber and leather have the density that weddings, black
+        tie and long ceremonies ask for.
       </p>
 
       <h2>Sophisticated rather than sweet</h2>
       <p>
-        The most common misstep in evening fragrance is mistaking sweetness for richness. Sugar
-        is loud early and tiring later. Depth comes from the interplay between a warm material
-        and a dry one — vanilla held in place by sandalwood, amber grounded by wood. That balance
-        is what separates a composition that feels refined from one that feels heavy.
-      </p>
-      <p>
-        <Link to="/perfumes/solaris">Sarkar Solaris</Link> is a useful example of the register:
-        an eau de parfum built on vanilla, sandalwood and amber, where the vanilla reads as
-        texture rather than sweetness, the sandalwood keeps it composed and the amber carries the
-        warmth through the evening. Its positioning — quiet power, presence, warmth, refinement —
-        describes the brief for evening wear as well as any note list can. It sits at MRP ₹1,499
-        for 100 ml, and it is unisex, as warm amber compositions generally should be.
+        The most common misstep in evening fragrance is mistaking sweetness for richness.
+        Sugar is loud early and tiring later. Depth comes from the interplay between a warm
+        material and a dry one, vanilla held in place by sandalwood, or amber grounded by oud
+        and cedarwood. That balance is what separates a composition that feels refined from
+        one that feels heavy. For background on how fragrance families are classified,{" "}
+        <Ext href="https://www.britannica.com/art/perfume">Britannica</Ext> is a reliable
+        starting point.
       </p>
       <p>
         For a broader framework on matching scent to skin and temperament, read{" "}
@@ -384,15 +368,15 @@ function EveningWear() {
           how to choose the right perfume for your personality
         </Link>
         , or learn{" "}
-        <Link to="/blog/$slug" params={{ slug: "fragrance-layering-guide" }}>how layering extends a fragrance</Link> across a
-        long night. The best perfume for evening wear is simply the one that still feels like you
-        at the end of it —{" "}
+        <Link to="/blog/$slug" params={{ slug: "fragrance-layering-guide" }}>
+          how layering extends a fragrance
+        </Link>{" "}
+        across a long night. The best perfume for evening wear is simply the one that still
+        feels like you at the end of it, so{" "}
         <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
           explore the Sarkar collection
         </a>{" "}
-        and find the fragrance that leaves your signature. For background on how fragrance
-        families are classified, <Ext href="https://www.britannica.com/art/perfume">Britannica</Ext>{" "}
-        is a reliable starting point.
+        and find the fragrance that leaves your signature.
       </p>
     </>
   );
@@ -402,97 +386,116 @@ function Layering() {
   return (
     <>
       <p>
-        Most people apply perfume and fragrances the same way every day and then wonder why the
-        scent is gone by lunch. Layering is the corrective: a method of building scent in stages
-        so it holds longer, reads with more depth and behaves predictably.
+        Most people apply perfume and fragrances the same way every day and then wonder why
+        the scent is gone by lunch. Layering is the corrective, a method of building scent in
+        stages so it holds longer, reads with more depth and behaves predictably.
+      </p>
+
+      <h2>What makes a perfume last longer</h2>
+      <p>
+        Longevity is decided by three things: the weight of the materials, the concentration
+        they are carried in, and the surface you put them on. Light citrus and green notes
+        evaporate quickly. Heavier base materials such as sandalwood, cedarwood, patchouli,
+        amber, leather, oud and musk evaporate slowly, which is why they are used to anchor a
+        composition. A higher oil concentration gives those materials the volume to keep
+        releasing, and moisturised skin holds them far better than dry skin does.
       </p>
 
       <h2>What fragrance layering means</h2>
       <p>
-        Layering is the deliberate combination of scented products — a body oil, a moisturiser, an
-        attar, a spray fragrance — so they support rather than fight each other. At its simplest
-        it means giving a perfume a base to sit on. At its most considered it means composing your
-        own accord from two or three complementary products.
-      </p>
-      <p>
-        People layer for two reasons: longevity, because oil-rich skin releases fragrance more
-        slowly, and character, because a second scent can push a familiar composition warmer,
-        drier or brighter.
+        Layering is the deliberate combination of scented products, a body oil, a moisturiser,
+        an attar, a spray fragrance, so they support rather than fight each other. At its
+        simplest it means giving a perfume a base to sit on. The safest combinations share a
+        material: vanilla layers naturally with amber and sandalwood, citrus works over woods,
+        rose sits comfortably with oud. Trouble comes from pairing two assertive compositions
+        with nothing in common. One composition leads, the other supports.
       </p>
 
-      <h2>Choosing complementary profiles</h2>
+      <h2>The long-wearing notes in each Sarkar perfume</h2>
       <p>
-        The safest combinations share a material. Vanilla layers naturally with amber and
-        sandalwood. Citrus works over woods. Rose sits comfortably with oud. Trouble comes from
-        pairing two assertive compositions with nothing in common — a smoky oud under a sharp
-        aquatic will simply argue.
+        Every Sarkar parfum is anchored differently, and knowing the base tells you both how
+        long it will stay and what it will feel like as it does.
       </p>
-      <p>
-        A useful rule: one composition leads, the other supports. Decide which is which before you
-        spray.
-      </p>
+      <ul>
+        <li>
+          <strong>Solaris:</strong> sandalwood and amber under vanilla. Warm, creamy and
+          composed, the kind of trail that feels golden rather than sweet.
+        </li>
+        <li>
+          <strong>Throne:</strong> amber, patchouli and cedarwood beneath leather and vanilla.
+          Smoky and lingering, with the longest presence in the range.
+        </li>
+        <li>
+          <strong>Regal:</strong> amber, leather and musk under oud and saffron. Dense, dark
+          and unhurried, made for formal nights.
+        </li>
+        <li>
+          <strong>Noble:</strong> cedarwood, musk and patchouli under pepper and citrus. Dry,
+          clean and precise, a quieter kind of staying power.
+        </li>
+        <li>
+          <strong>Orion:</strong> sandalwood, musk and patchouli under lemon and lavender.
+          Fresh at the top but woody underneath, so it lasts longer than a citrus usually
+          would.
+        </li>
+      </ul>
+
+      <PerfumePickCards keys={["solaris", "throne", "regal", "noble"]} />
 
       <h2>Build from the skin outward</h2>
       <ol>
         <li>Shower and pat dry, leaving skin slightly warm.</li>
         <li>Apply an unscented or lightly scented moisturiser to dry areas.</li>
-        <li>
-          If you use an attar or body oil, apply it now, sparingly, to the neck and wrists.
-        </li>
+        <li>If you use an attar or body oil, apply it now, sparingly, to neck and wrists.</li>
         <li>Finish with the spray fragrance while the skin is still receptive.</li>
       </ol>
       <p>
-        Start with the lighter or more supporting scent and let the stronger composition sit on
+        Start with the lighter or supporting scent and let the stronger composition sit on
         top. Reversing that order buries the fragrance you actually chose.
       </p>
 
       <h2>Where to apply</h2>
       <p>
-        Pulse points — the sides of the neck, the inner wrists, the inner elbows — are warmer, and
-        warmth releases fragrance steadily through the day. Two to four applications is enough for
-        most compositions. Spraying into the air and walking through it wastes most of the product
-        and gives you no control.
-      </p>
-      <p>
-        Do not rub. Friction breaks down the top notes and shortens the opening you paid for.
+        Pulse points, the sides of the neck, the inner wrists and the inner elbows, are warmer,
+        and warmth releases fragrance steadily through the day. Two to four applications is
+        enough for most compositions. Spraying into the air and walking through it wastes most
+        of the product. Do not rub, because friction breaks down the top notes.
       </p>
 
       <h2>How clothing, skin and weather change perfume and fragrances</h2>
       <p>
-        Fabric holds scent longer than skin, which is useful for trail but removes the interaction
-        with your own chemistry — and some materials can stain, so test discreetly. Dry skin
-        releases fragrance fast; moisturising first is the single most effective longevity fix.
-        Heat accelerates everything, so summer needs a lighter hand, while cool air keeps a
-        composition close and extends it naturally.
+        Fabric holds scent longer than skin, which is useful for trail but removes the
+        interaction with your own chemistry, and some materials can stain, so test discreetly.
+        Dry skin releases fragrance fast, so moisturising first is the single most effective
+        longevity fix. Heat accelerates everything, while cool air keeps a composition close
+        and extends it naturally.
       </p>
 
       <h2>Common mistakes</h2>
       <ul>
         <li>Applying to dry skin with nothing to anchor the scent.</li>
         <li>Layering two dominant compositions with no shared material.</li>
-        <li>Over-applying, then re-applying because your nose has adapted to it.</li>
+        <li>Over applying, then re applying because your nose has adapted.</li>
         <li>Storing bottles in a sunlit bathroom, where heat and light degrade the oils.</li>
         <li>Rubbing wrists together immediately after spraying.</li>
       </ul>
       <p>
         On safety and sensible use, the{" "}
-        <Ext href="https://ifrafragrance.org/">International Fragrance Association</Ext> maintains
-        the ingredient standards that fragrance houses formulate against — worth knowing if your
-        skin reacts easily.
+        <Ext href="https://ifrafragrance.org/">International Fragrance Association</Ext>{" "}
+        maintains the ingredient standards that fragrance houses formulate against, worth
+        knowing if your skin reacts easily.
       </p>
 
       <h2>A simple beginner routine</h2>
       <p>
-        Unscented moisturiser on the neck and wrists. A small amount of a warm, woody attar or oil
-        on the same points. Two sprays of an eau de parfum sharing one of those materials. Nothing
-        on the hair, nothing on the face. Reassess at hour three rather than adding more at hour
-        one.
+        Unscented moisturiser on the neck and wrists. A small amount of a warm, woody attar or
+        oil on the same points. Two sprays of a parfum sharing one of those materials. Nothing
+        on the hair, nothing on the face. Reassess at hour three rather than adding more at
+        hour one. That routine works particularly well with warm compositions such as Solaris,
+        which layers cleanly over a sandalwood base because the materials already overlap.
       </p>
       <p>
-        That routine works particularly well with warm compositions. Sarkar Solaris — vanilla,
-        sandalwood and amber, an eau de parfum at 100 ml — layers cleanly over a sandalwood base
-        because the materials already overlap. If the format terminology is unfamiliar, our guide
-        to{" "}
+        If the format terminology is unfamiliar, our guide to{" "}
         <Link to="/blog/$slug" params={{ slug: "eau-de-parfum-vs-eau-de-toilette-vs-attar" }}>
           eau de parfum, eau de toilette and attar
         </Link>{" "}
@@ -500,11 +503,8 @@ function Layering() {
         <Link to="/blog/$slug" params={{ slug: "how-to-choose-the-right-perfume" }}>
           how to choose a perfume for your skin type
         </Link>{" "}
-        explains why the same routine performs differently on different people.
-      </p>
-      <p>
-        Layering is a small discipline with a disproportionate effect on how perfume and fragrances
-        wear. Once the method is habitual, the bottle you already own will feel like a better one.{" "}
+        explains why the same routine performs differently on different people. Once the
+        method is habitual, the bottle you already own will feel like a better one.{" "}
         <Link to="/perfumes/solaris">Explore Sarkar Solaris</Link> or{" "}
         <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
           discover the Sarkar collection
