@@ -47,9 +47,9 @@ export const posts: BlogPost[] = [
     description:
       "A practical guide to finding the best perfume for your personality and skin type — fragrance families, testing, and building a signature scent.",
     excerpt:
-      "Fragrance families, skin chemistry and the quiet art of testing properly — how to find a scent that reads as yours.",
+      "Fragrance families, skin chemistry and five personality types, matched to Throne, Orion, Noble, Regal and Solaris.",
     category: "Fragrance Guide",
-    readingTime: "4 min read",
+    readingTime: "5 min read",
     primaryKeyword: "best perfume",
     secondaryKeywords: [
       "how to choose a perfume",
@@ -59,8 +59,8 @@ export const posts: BlogPost[] = [
     h2s: [
       "Why the best perfume is a personal decision",
       "Start with fragrance families",
-      "Let personality guide the register, not the rules",
       "Skin type changes everything",
+      "Five personality types and the Sarkar perfume that fits",
       "How to test a fragrance properly",
       "Finding a signature scent",
       "Occasion and season",
@@ -77,9 +77,9 @@ export const posts: BlogPost[] = [
     cta: "Discover the Sarkar collection.",
     image: chooseImg,
     imageAlt:
-      "Polished sandalwood blocks and shavings lit by warm golden light, a classic woody fragrance material",
+      "Sarkar Throne, Orion, Noble, Regal and Solaris perfume bottles grouped together under warm golden light",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-30",
     related: ["eau-de-parfum-vs-eau-de-toilette-vs-attar", "best-perfumes-for-evening-wear"],
   },
   {
