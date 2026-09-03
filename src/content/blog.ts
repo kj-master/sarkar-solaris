@@ -161,7 +161,7 @@ export const posts: BlogPost[] = [
     cta: "Find the fragrance that leaves your signature.",
     image: eveningImg,
     imageAlt:
-      "Sarkar Solaris and Sarkar Regal perfume bottles together in a low-lit evening setting with warm amber light",
+      "Sarkar Solaris and Sarkar Regal chess-king perfume bottles side by side on a white studio background",
     datePublished: "2026-08-27",
     dateModified: "2026-08-30",
     related: ["how-to-choose-the-right-perfume", "fragrance-layering-guide"],
