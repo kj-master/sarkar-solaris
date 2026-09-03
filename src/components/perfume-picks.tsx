@@ -4,7 +4,7 @@ import nobleImg from "@/assets/range-noble.webp";
 import orionImg from "@/assets/range-orion.webp";
 import regalImg from "@/assets/range-regal.webp";
 import throneImg from "@/assets/range-throne.webp";
-import solarisImg from "@/assets/solaris-hero-640.webp";
+import solarisImg from "@/assets/solaris-bottle-white.webp";
 
 export interface PerfumePick {
   name: string;
@@ -23,8 +23,8 @@ export const perfumePicks: Record<string, PerfumePick> = {
   solaris: {
     name: "Sarkar Solaris",
     image: solarisImg,
-    alt: "Sarkar Solaris golden amber parfum bottle in a dark cinematic setting",
-    fit: "cover",
+    alt: "Sarkar Solaris golden amber chess-king parfum bottle on a white background",
+    fit: "contain",
     href: "/perfumes/solaris",
     internal: true,
     headline: "The quiet one who still commands the room",
