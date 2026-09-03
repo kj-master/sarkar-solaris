@@ -23,8 +23,8 @@ export const perfumePicks: Record<string, PerfumePick> = {
   solaris: {
     name: "Sarkar Solaris",
     image: solarisImg,
-    alt: "Sarkar Solaris golden amber parfum bottle in a dark cinematic setting",
-    fit: "cover",
+    alt: "Sarkar Solaris golden amber chess-king parfum bottle on a white background",
+    fit: "contain",
     href: "/perfumes/solaris",
     internal: true,
     headline: "The quiet one who still commands the room",
