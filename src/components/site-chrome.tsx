@@ -16,7 +16,7 @@ export const rangeProducts = range;
 
 export function RangeStrip({
   title = "Explore the Sarkar range",
-  note = "Throne, Orion, Noble and Regal — the parfums Solaris joins.",
+  note = "Throne, Orion, Noble and Regal, the parfums Solaris joins.",
 }: {
   title?: string;
   note?: string;

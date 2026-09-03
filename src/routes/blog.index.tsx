@@ -5,7 +5,7 @@ import { posts, SITE_URL } from "@/content/blog";
 
 const TITLE = "Sarkar Blogs | Perfume & Fragrance Guides";
 const DESCRIPTION =
-  "Fragrance guides from the Sarkar Blog — choosing a perfume, understanding concentrations, evening wear and the art of layering.";
+  "Fragrance guides from the Sarkar Blog: choosing a perfume, understanding concentrations, evening wear and the art of layering.";
 const URL_PATH = `${SITE_URL}/blog`;
 const OG_IMAGE = `${SITE_URL}${posts[2]?.image ?? ""}`;
 
@@ -66,7 +66,7 @@ function BlogIndex() {
             </h1>
             <div className="rule-gold my-7 w-32" />
             <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
-              Notes on fragrance — how scent is chosen, how concentrations differ, how an
+              Notes on fragrance, how scent is chosen, how concentrations differ, how an
               evening changes what you wear, and the small disciplines that make a perfume
               last. Written to be useful before it is anything else.
             </p>
