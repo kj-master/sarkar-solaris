@@ -199,3 +199,16 @@
 .journal-prose th {
   min-width: 7.5rem;
 }
+
+/* Product pick cards embedded inside article prose keep their own typography */
+.journal-prose .not-prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.journal-prose .not-prose a {
+  border-bottom: 1px solid var(--gold);
+}
+.journal-prose .not-prose > * + * {
+  margin-top: 0;
+}
