@@ -4,7 +4,7 @@ import nobleImg from "@/assets/range-noble.webp";
 import orionImg from "@/assets/range-orion.webp";
 import regalImg from "@/assets/range-regal.webp";
 import throneImg from "@/assets/range-throne.webp";
-import solarisImg from "@/assets/solaris-hero-640.webp";
+import solarisImg from "@/assets/solaris-bottle-white.webp";
 
 export interface PerfumePick {
   name: string;
