@@ -45,7 +45,7 @@ export const posts: BlogPost[] = [
     h1: "How to Choose the Right Perfume for Your Personality and Skin Type",
     seoTitle: "How to Choose the Best Perfume for You",
     description:
-      "A practical guide to finding the best perfume for your personality and skin type — fragrance families, testing, and building a signature scent.",
+      "A practical guide to finding the best perfume for your personality and skin type: fragrance families, testing, and building a signature scent.",
     excerpt:
       "Fragrance families, skin chemistry and five personality types, matched to Throne, Orion, Noble, Regal and Solaris.",
     category: "Fragrance Guide",
