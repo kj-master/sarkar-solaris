@@ -7,7 +7,9 @@
 
 import concentrationImg from "@/assets/sarkar-perfume-range-lineup.webp";
 import chooseImg from "@/assets/sarkar-perfume-range-personality.webp";
+import chooseImgMobile from "@/assets/sarkar-perfume-range-personality-640.webp";
 import eveningImg from "@/assets/sarkar-solaris-regal-evening-perfume.webp";
+import eveningImgMobile from "@/assets/sarkar-solaris-regal-evening-perfume-640.webp";
 import layeringImg from "@/assets/solaris-interior.webp";
 
 export const SITE_URL = "https://sarkar-solaris.lovable.app";
@@ -32,6 +34,8 @@ export interface BlogPost {
   externalLink: { label: string; href: string };
   cta: string;
   image: string;
+  /** 640w mobile variant for responsive srcset (optional) */
+  imageMobile?: string;
   imageAlt: string;
   datePublished: string;
   dateModified: string;
@@ -76,6 +80,7 @@ export const posts: BlogPost[] = [
     },
     cta: "Discover the Sarkar collection.",
     image: chooseImg,
+    imageMobile: chooseImgMobile,
     imageAlt:
       "Sarkar Throne, Orion, Noble, Regal and Solaris perfume bottles grouped together under warm golden light",
     datePublished: "2026-08-27",
@@ -160,6 +165,7 @@ export const posts: BlogPost[] = [
     },
     cta: "Find the fragrance that leaves your signature.",
     image: eveningImg,
+    imageMobile: eveningImgMobile,
     imageAlt:
       "Sarkar Solaris and Sarkar Regal chess-king perfume bottles side by side on a white studio background",
     datePublished: "2026-08-27",

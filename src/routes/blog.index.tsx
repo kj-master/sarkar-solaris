@@ -26,7 +26,19 @@ export const Route = createFileRoute("/blog/")({
       { name: "twitter:description", content: DESCRIPTION },
       { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: URL_PATH }],
+    links: [
+      { rel: "canonical", href: URL_PATH },
+      {
+        rel: "preload",
+        as: "image",
+        href: posts[0]?.imageMobile ?? posts[0]?.image ?? "",
+        imageSrcSet: posts[0]?.imageMobile
+          ? `${posts[0].imageMobile} 640w, ${posts[0].image} 1100w`
+          : undefined,
+        imageSizes: "(max-width: 768px) 100vw, 1100px",
+        fetchpriority: "high",
+      },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -86,10 +98,17 @@ function BlogIndex() {
                   >
                     <img
                       src={p.image}
+                      srcSet={
+                        p.imageMobile
+                          ? `${p.imageMobile} 640w, ${p.image} 1100w`
+                          : undefined
+                      }
+                      sizes="(max-width: 768px) 100vw, 608px"
                       alt={p.imageAlt}
                       width={1100}
                       height={730}
-                      loading={i < 2 ? "eager" : "lazy"}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      fetchPriority={i === 0 ? "high" : undefined}
                       decoding="async"
                       className="aspect-[3/2] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
