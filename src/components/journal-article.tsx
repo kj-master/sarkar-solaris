@@ -97,6 +97,12 @@ export function JournalArticle({
             <figure className="overflow-hidden bg-ink">
               <img
                 src={post.image}
+                srcSet={
+                  post.imageMobile
+                    ? `${post.imageMobile} 640w, ${post.image} 1100w`
+                    : undefined
+                }
+                sizes="(max-width: 768px) 100vw, 1100px"
                 alt={post.imageAlt}
                 width={1100}
                 height={730}
@@ -150,6 +156,12 @@ export function JournalArticle({
                 <article key={r.slug} className="border border-border bg-background">
                   <img
                     src={r.image}
+                    srcSet={
+                      r.imageMobile
+                        ? `${r.imageMobile} 640w, ${r.image} 1100w`
+                        : undefined
+                    }
+                    sizes="(max-width: 768px) 100vw, 520px"
                     alt={r.imageAlt}
                     width={1100}
                     height={730}
