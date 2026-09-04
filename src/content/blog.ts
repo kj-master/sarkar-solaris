@@ -7,7 +7,9 @@
 
 import concentrationImg from "@/assets/sarkar-perfume-range-lineup.webp";
 import chooseImg from "@/assets/sarkar-perfume-range-personality.webp";
+import chooseImgMobile from "@/assets/sarkar-perfume-range-personality-640.webp";
 import eveningImg from "@/assets/sarkar-solaris-regal-evening-perfume.webp";
+import eveningImgMobile from "@/assets/sarkar-solaris-regal-evening-perfume-640.webp";
 import layeringImg from "@/assets/solaris-interior.webp";
 
 export const SITE_URL = "https://sarkar-solaris.lovable.app";
@@ -32,6 +34,8 @@ export interface BlogPost {
   externalLink: { label: string; href: string };
   cta: string;
   image: string;
+  /** 640w mobile variant for responsive srcset (optional) */
+  imageMobile?: string;
   imageAlt: string;
   datePublished: string;
   dateModified: string;
