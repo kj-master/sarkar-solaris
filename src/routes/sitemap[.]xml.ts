@@ -13,19 +13,23 @@ const postSlugs = [
 
 interface SitemapEntry {
   path: string;
+  lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
 }
+
+const LASTMOD = "2026-09-04";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
         const entries: SitemapEntry[] = [
-          { path: "/perfumes/solaris", changefreq: "weekly", priority: "1.0" },
-          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          { path: "/perfumes/solaris", lastmod: LASTMOD, changefreq: "weekly", priority: "1.0" },
+          { path: "/blog", lastmod: LASTMOD, changefreq: "weekly", priority: "0.8" },
           ...postSlugs.map((slug) => ({
             path: `/blog/${slug}`,
+            lastmod: LASTMOD,
             changefreq: "monthly" as const,
             priority: "0.7",
           })),
@@ -36,6 +40,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
+            e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : null,
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
