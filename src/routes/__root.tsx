@@ -77,6 +77,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "google-site-verification", content: "mFvOnHCgJAm2aQlLAtZfk6WczOgTGZbyzbmcv1v0kyk" },
       { title: "SARKAR" },
       { name: "description", content: "SARKAR — parfum built for quiet, absolute presence." },
       { name: "robots", content: "index, follow" },
