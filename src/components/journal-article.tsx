@@ -17,11 +17,9 @@ export function articleHead(post: BlogPost) {
       { property: "og:description", content: post.description },
       { property: "og:type", content: "article" },
       { property: "og:url", content: url },
-      { property: "og:image", content: image },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: post.seoTitle },
       { name: "twitter:description", content: post.description },
-      { name: "twitter:image", content: image },
     ],
     links: [{ rel: "canonical", href: url }],
     scripts: [
@@ -153,7 +151,7 @@ export function JournalArticle({
               </p>
               <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
                 Eau de Parfum · 100 ML · Vanilla, sandalwood and amber. MRP ₹1,499, incl. of
-                all taxes.
+                all taxes. University concept; price is illustrative.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link

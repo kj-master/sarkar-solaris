@@ -84,7 +84,7 @@ export const posts: BlogPost[] = [
     imageAlt:
       "Sarkar Throne, Orion, Noble, Regal and Solaris perfume bottles grouped together under warm golden light",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-30",
+    dateModified: "2026-10-08",
     related: ["eau-de-parfum-vs-eau-de-toilette-vs-attar", "best-perfumes-for-evening-wear"],
   },
   {
@@ -126,7 +126,7 @@ export const posts: BlogPost[] = [
     imageAlt:
       "Sarkar Throne, Orion, Noble, Regal and Solaris parfum bottles lined up side by side on a dark surface",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-30",
+    dateModified: "2026-10-08",
     related: ["how-to-choose-the-right-perfume", "fragrance-layering-guide"],
   },
   {
@@ -169,7 +169,7 @@ export const posts: BlogPost[] = [
     imageAlt:
       "Sarkar Solaris and Sarkar Regal chess-king perfume bottles side by side on a white studio background",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-30",
+    dateModified: "2026-10-08",
     related: ["how-to-choose-the-right-perfume", "fragrance-layering-guide"],
   },
   {
@@ -212,7 +212,7 @@ export const posts: BlogPost[] = [
     imageAlt:
       "Sarkar parfum bottle on dark wood in a sunlit interior, warm afternoon light",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-30",
+    dateModified: "2026-10-08",
     related: ["how-to-choose-the-right-perfume", "eau-de-parfum-vs-eau-de-toilette-vs-attar"],
   },
 ];
