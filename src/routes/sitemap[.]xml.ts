@@ -18,7 +18,7 @@ interface SitemapEntry {
   priority?: string;
 }
 
-const LASTMOD = "2026-09-04";
+const LASTMOD = "2026-10-08";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {

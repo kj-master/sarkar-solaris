@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { SITE_URL, projectPublisher, breadcrumbs, UPDATED_DATE } from "@/content/site-seo";
 
-const title = "About the Solaris Concept Project | Sources & Editorial Policy";
+const title = "About Solaris | Concept Project & Editorial Sources";
 const description = "Who is behind the Solaris university concept, how the fragrance guides use sources, and where to verify official Sarkar product information.";
 
 export const Route = createFileRoute("/about")({
@@ -58,6 +58,12 @@ function AboutPage() {
           <p>The displayed ₹1,499 price, 24–36 hour shipping message and checkout are prototype details, not a commercial offer. Customer feedback is illustrative, not verified reviews. Solaris composition and campaign imagery express a design concept rather than evidence of a manufactured or tested formula.</p>
           <h2>Official brand presence and enquiries</h2>
           <p>For real products, current prices, availability, support and policies, use the <a href="https://www.sarkar.store/">official Sarkar website</a>. The brand’s social presence is linked separately from this university project: <a href="https://www.instagram.com/houseofsarkar/">Sarkar on Instagram</a>.</p>
+          <p>Official Sarkar customer support: <a href="mailto:support@sarkar.store">support@sarkar.store</a>. This is the commercial brand’s support address, not a contact for this university project.</p>
+          <ul>
+            <li><a href="https://www.sarkar.store/pages/shipping-policy">Official store shipping policy</a></li>
+            <li><a href="https://www.sarkar.store/pages/refund-policy">Official store refund policy</a></li>
+            <li><a href="https://www.sarkar.store/pages/privacy-policy">Official store privacy policy</a></li>
+          </ul>
           <h2>Explore the project</h2>
           <p><Link to="/perfumes/solaris">Explore the Solaris concept</Link> or read the <Link to="/blog">fragrance guides</Link>. An <a href="/llms.txt">AI-readable reference</a> distinguishes the concept from the official brand and links to the project’s key pages.</p>
         </div>
