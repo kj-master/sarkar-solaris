@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader, SiteFooter, RangeStrip } from "@/components/site-chrome";
 import { posts, SITE_URL } from "@/content/blog";
+import { projectPublisher, breadcrumbs } from "@/content/site-seo";
 
 const TITLE = "Sarkar Blogs | Perfume & Fragrance Guides";
 const DESCRIPTION =
@@ -48,7 +49,7 @@ export const Route = createFileRoute("/blog/")({
           name: "The Sarkar Blog",
           description: DESCRIPTION,
           url: URL_PATH,
-          publisher: { "@type": "Organization", name: "Sarkar", url: SITE_URL },
+          publisher: projectPublisher,
           blogPost: posts.map((p) => ({
             "@type": "BlogPosting",
             headline: p.h1,
@@ -56,6 +57,13 @@ export const Route = createFileRoute("/blog/")({
             datePublished: p.datePublished,
           })),
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbs([
+          { name: "Solaris", path: "/perfumes/solaris" },
+          { name: "Blogs", path: "/blog" },
+        ])),
       },
     ],
   }),

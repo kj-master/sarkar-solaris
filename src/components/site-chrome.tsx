@@ -141,6 +141,11 @@ export function SiteFooter() {
                 Blogs
               </Link>
             </li>
+            <li>
+              <Link to="/about" className="text-xs font-light text-ink">
+                About &amp; sources
+              </Link>
+            </li>
           </ul>
         </nav>
         <div>
@@ -156,6 +161,12 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
+          <p className="mt-6 text-[0.58rem] uppercase tracking-[0.28em] text-muted-foreground">
+            Official presence
+          </p>
+          <a href="https://www.instagram.com/houseofsarkar/" className="mt-3 block text-xs font-light text-ink">
+            Sarkar on Instagram
+          </a>
         </div>
       </div>
       <div className="border-t border-border">

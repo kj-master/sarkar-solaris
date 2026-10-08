@@ -15,6 +15,8 @@ import throneImg from "@/assets/range-throne.webp";
 import orionImg from "@/assets/range-orion.webp";
 import nobleImg from "@/assets/range-noble.webp";
 import regalImg from "@/assets/range-regal.webp";
+import { ProjectLinks } from "@/components/project-links";
+import { breadcrumbs, projectPublisher } from "@/content/site-seo";
 
 const TITLE = "Sarkar Solaris Perfume | Quiet. Golden. Commanding.";
 const DESCRIPTION =
@@ -67,8 +69,21 @@ export const Route = createFileRoute("/perfumes/solaris")({
             price: "1499",
             priceCurrency: "INR",
             url: URL_PATH,
+            description: "Illustrative concept-page pricing; not an official commercial offer.",
           },
+          additionalProperty: {
+            "@type": "PropertyValue",
+            name: "Project status",
+            value: "University assignment concept; not an officially launched Sarkar product",
+          },
+          manufacturer: projectPublisher,
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbs([
+          { name: "Solaris concept", path: "/perfumes/solaris" },
+        ])),
       },
     ],
   }),
@@ -504,6 +519,9 @@ function SolarisPage() {
               <p className="mt-1 text-xs font-light text-muted-foreground">
                 Ships within 24–36 hours of ordering
               </p>
+              <p className="mt-4 border-l-2 border-gold pl-4 text-xs font-light leading-relaxed text-muted-foreground">
+                University concept prototype. Solaris is not an officially launched Sarkar product; price, shipping and checkout are illustrative.
+              </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <button
@@ -679,6 +697,7 @@ function SolarisPage() {
               Parfum built for quiet, absolute presence. Solaris is a concept variant created
               for a university assignment within the Sarkar brand system.
             </p>
+            <ProjectLinks />
           </div>
           <nav aria-label="Footer">
             <p className="text-[0.58rem] uppercase tracking-[0.28em] text-muted-foreground">
@@ -706,6 +725,11 @@ function SolarisPage() {
               <li>
                 <Link to="/blog" className="text-xs font-light text-ink">
                   Blogs
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-xs font-light text-ink">
+                  About &amp; sources
                 </Link>
               </li>
 
