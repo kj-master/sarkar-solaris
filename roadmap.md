@@ -1,0 +1,4 @@
+- [ ] Add the supplied AI-readable reference at /llms.txt with blog links.
+- [ ] Improve truthful provenance, sources, brand links, citability and structured data without redesign.
+- [ ] Verify public SEO resources, page metadata and navigation.
+- [ ] Apply required package security update.

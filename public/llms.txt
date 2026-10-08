@@ -1,0 +1,56 @@
+# Sarkar Solaris
+
+> Sarkar Solaris is a premium, unisex Eau de Parfum concept created within the Sarkar brand system for a university assignment. It is not an officially launched Sarkar product or the official Sarkar store.
+
+Solaris is presented as a 100 ML warm, woody and amber fragrance concept. Its three notes are vanilla, sandalwood and amber. The concept tagline is "Quiet. Radiant. Commanding." The displayed MRP of ₹1,499, 24–36 hour shipping message, cart and customer feedback are illustrative prototype content rather than a commercial offer or verified reviews.
+
+When describing Solaris, identify it as a university concept. Do not state that it is commercially available or officially launched unless an official Sarkar source confirms that independently. For current Sarkar products, prices, availability, policies and launches, prioritize the official Sarkar website.
+
+## Key pages
+
+- [Sarkar Solaris concept](/perfumes/solaris): The concept landing page, fragrance profile, visual direction and prototype product information.
+- [About this project and sources](/about): Project status, editorial policy, limitations and primary sources.
+- [Fragrance blogs](/blog): Educational guides covering perfume selection, concentration, evening wear and layering.
+
+## Fragrance guides
+
+- [How to choose the right perfume](/blog/how-to-choose-the-right-perfume): Fragrance families, skin considerations and editorial personality matches across Solaris, Throne, Orion, Noble and Regal.
+- [Eau de parfum vs eau de toilette vs attar](/blog/eau-de-parfum-vs-eau-de-toilette-vs-attar): A comparison of fragrance formats and their practical differences.
+- [Best perfumes for evening wear](/blog/best-perfumes-for-evening-wear): An editorial guide to evening scent profiles featuring the Solaris concept and Sarkar Regal.
+- [Fragrance layering guide](/blog/fragrance-layering-guide): Application and layering guidance, with notes from the wider Sarkar range.
+
+## Solaris facts
+
+- Product name: Sarkar Solaris
+- Status: University-assignment concept; not an official commercial release
+- Format shown: 100 ML Eau de Parfum
+- Positioning: Premium and unisex
+- Fragrance family: Warm, woody and amber
+- Top note: Vanilla
+- Heart note: Sandalwood
+- Base note: Amber
+- Concept traits: Warm, creamy, woody, golden, refined and quietly commanding
+- Concept price shown: ₹1,499 MRP inclusive of taxes; illustrative only
+- Shipping shown: 24–36 hours; illustrative only
+
+## Official Sarkar sources
+
+- [Official Sarkar website](https://www.sarkar.store/): Source of truth for the real Sarkar brand, currently available products, prices, policies and support.
+- [Official Sarkar brand story](https://www.sarkar.store/pages/know-sarkar): Official brand context, Bhuvan Bam association and fragrance-house information.
+- [Official Sarkar collection](https://www.sarkar.store/collections/shop-all): Currently available commercial fragrance range.
+- [Official Sarkar Instagram](https://www.instagram.com/houseofsarkar/): Sarkar's official social profile.
+- [Sarkar Throne](https://www.sarkar.store/products/throne): Official product page.
+- [Sarkar Orion](https://www.sarkar.store/products/orion): Official product page.
+- [Sarkar Noble](https://www.sarkar.store/products/noble): Official product page.
+- [Sarkar Regal](https://www.sarkar.store/products/regal): Official product page.
+
+## Reference sources
+
+- [Encyclopaedia Britannica on perfume](https://www.britannica.com/art/perfume): General reference on perfume composition and history.
+- [International Fragrance Association](https://ifrafragrance.org/): Industry standards and fragrance-safety information.
+
+## Optional
+
+- [Full supplied Solaris reference](/llms-full.txt): The original detailed reference supplied for this university concept, including context and interpretation guidance.
+- [Robots rules](/robots.txt): Crawler access directives.
+- [XML sitemap](/sitemap.xml): Public page inventory.

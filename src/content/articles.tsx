@@ -25,8 +25,8 @@ function ChoosePerfume() {
       <h2>Why the best perfume is a personal decision</h2>
       <p>
         Fragrance changes after you buy it. The same composition can read warm on one person
-        and sharp on another, because scent develops in contact with skin, its temperature,
-        its oils and its pH. A perfume someone else wears beautifully is not evidence that it
+        and sharp on another. Skin, application and the environment can affect how a scent
+        is perceived. A perfume someone else wears beautifully is not evidence that it
         will suit you. It is only evidence that it is worth testing.
       </p>
 
@@ -60,15 +60,14 @@ function ChoosePerfume() {
 
       <h2>Skin type changes everything</h2>
       <p>
-        Oily skin holds fragrance molecules well, so scents last longer and project more, and
-        rich amber or leather compositions can become intense faster than expected. Dry skin
-        releases fragrance quickly, which flatters bright citrus briefly but cuts a
-        composition short, so moisturising with an unscented lotion first gives the perfume
-        something to hold on to. Warmer skin amplifies sweetness and spice, cooler skin keeps
-        compositions crisper. If your skin reacts easily, the{" "}
+        Skin type is a reason to test, not a reliable predictor of which perfume suits you.
+        If your skin is dry, try your usual unscented moisturiser before applying fragrance;
+        compare the result rather than assuming a guaranteed improvement. If your skin
+        reacts easily, avoid layering unfamiliar products. The{" "}
         <Ext href="https://ifrafragrance.org/">International Fragrance Association</Ext>{" "}
-        publishes the ingredient standards the industry formulates against, and applying to
-        clothing instead of skin is a reasonable adjustment.
+        publishes fragrance ingredient standards, but these are not a diagnosis or a
+        guarantee against individual reactions. Follow product directions, stop using a
+        fragrance if irritation occurs, and seek medical advice for persistent symptoms.
       </p>
 
       <h2>Five personality types and the Sarkar perfume that fits</h2>
@@ -93,9 +92,8 @@ function ChoosePerfume() {
       <p>
         Paper strips show the opening and almost nothing else. Test on skin, one or two
         fragrances at a time, and then leave. The first fifteen minutes are alcohol and top
-        notes burning off, the heart appears after roughly half an hour, and the base after
-        two to four hours. Judge at hour three, not minute three, and avoid rubbing your
-        wrists together because friction bruises the top notes.
+        notes changing most noticeably. Revisit the fragrance later to experience its
+        dry-down; exact timing varies by formula. Let it dry naturally without rubbing.
       </p>
 
       <h2>Finding a signature scent</h2>
@@ -337,8 +335,8 @@ function EveningWear() {
 
       <h2>Two Sarkar perfumes we recommend for evening wear</h2>
       <p>
-        Two fragrances in the Sarkar range are built for these hours, and they answer the
-        brief from opposite directions: one warm and composed, the other dark and formal.
+        Two scent directions illustrate the evening brief: the Solaris university concept
+        is warm and composed; the existing Sarkar Regal fragrance is dark and formal.
       </p>
 
       <PerfumePickCards keys={["solaris", "regal"]} />
@@ -347,7 +345,7 @@ function EveningWear() {
         Choose <Link to="/perfumes/solaris">Sarkar Solaris</Link> for dinners, dates and
         evenings where you want warmth and quiet authority rather than a statement. The
         vanilla reads as texture, the sandalwood keeps it composed and the amber carries it
-        through the night, at MRP ₹1,499 for 100 ml. Choose Sarkar Regal when the occasion is
+        in the concept’s intended profile, with an illustrative MRP ₹1,499 for 100 ml. Choose Sarkar Regal when the occasion is
         formal, because oud, saffron, amber and leather have the density that weddings, black
         tie and long ceremonies ask for.
       </p>
@@ -413,8 +411,9 @@ function Layering() {
 
       <h2>The long-wearing notes in each Sarkar perfume</h2>
       <p>
-        Every Sarkar parfum is anchored differently, and knowing the base tells you both how
-        long it will stay and what it will feel like as it does.
+        Each Sarkar fragrance has a different base profile. These notes suggest a dry-down
+        character, but they do not tell you exactly how long a formula will last. No
+        comparative wear test is claimed here.
       </p>
       <ul>
         <li>
@@ -423,7 +422,7 @@ function Layering() {
         </li>
         <li>
           <strong>Throne:</strong> amber, patchouli and cedarwood beneath leather and vanilla.
-          Smoky and lingering, with the longest presence in the range.
+          A smoky, woody interpretation; comparative longevity is not established here.
         </li>
         <li>
           <strong>Regal:</strong> amber, leather and musk under oud and saffron. Dense, dark
@@ -435,8 +434,7 @@ function Layering() {
         </li>
         <li>
           <strong>Orion:</strong> sandalwood, musk and patchouli under lemon and lavender.
-          Fresh at the top but woody underneath, so it lasts longer than a citrus usually
-          would.
+          A fresh opening with a woody, musky base profile.
         </li>
       </ul>
 
@@ -458,8 +456,8 @@ function Layering() {
       <p>
         Pulse points, the sides of the neck, the inner wrists and the inner elbows, are warmer,
         and warmth releases fragrance steadily through the day. Two to four applications is
-        enough for most compositions. Spraying into the air and walking through it wastes most
-        of the product. Do not rub, because friction breaks down the top notes.
+        a starting point rather than a rule; follow the product directions. Spraying into
+        the air and walking through it wastes product. Let fragrance dry without rubbing.
       </p>
 
       <h2>How clothing, skin and weather change perfume and fragrances</h2>

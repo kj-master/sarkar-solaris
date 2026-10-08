@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 
 import { SiteHeader, SiteFooter, RangeStrip } from "@/components/site-chrome";
 import { posts, type BlogPost, SITE_URL, SHOP_URL } from "@/content/blog";
+import { articleSummaries, breadcrumbs, projectPublisher } from "@/content/site-seo";
 
 export function articleHead(post: BlogPost) {
   const url = `${SITE_URL}/blog/${post.slug}`;
@@ -16,11 +17,9 @@ export function articleHead(post: BlogPost) {
       { property: "og:description", content: post.description },
       { property: "og:type", content: "article" },
       { property: "og:url", content: url },
-      { property: "og:image", content: image },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: post.seoTitle },
       { name: "twitter:description", content: post.description },
-      { name: "twitter:image", content: image },
     ],
     links: [{ rel: "canonical", href: url }],
     scripts: [
@@ -34,15 +33,22 @@ export function articleHead(post: BlogPost) {
           image: [image],
           datePublished: post.datePublished,
           dateModified: post.dateModified,
-          author: { "@type": "Organization", name: "Sarkar" },
-          publisher: {
-            "@type": "Organization",
-            name: "Sarkar",
-            url: SITE_URL,
-          },
+          author: projectPublisher,
+          publisher: projectPublisher,
+          articleSection: post.category,
+          abstract: articleSummaries[post.slug],
+          citation: [post.externalLink.href],
           mainEntityOfPage: { "@type": "WebPage", "@id": url },
           keywords: [post.primaryKeyword, ...post.secondaryKeywords].join(", "),
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbs([
+          { name: "Solaris", path: "/perfumes/solaris" },
+          { name: "Blogs", path: "/blog" },
+          { name: post.h1, path: `/blog/${post.slug}` },
+        ])),
       },
     ],
   };
@@ -91,6 +97,11 @@ export function JournalArticle({
               {post.h1}
             </h1>
             <div className="rule-gold my-7 w-28" />
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-light text-muted-foreground">
+              <span>By Solaris concept project</span>
+              <span>Published <time dateTime={post.datePublished}>{post.datePublished}</time></span>
+              <span>Updated <time dateTime={post.dateModified}>{post.dateModified}</time></span>
+            </div>
           </div>
 
           <div className="mx-auto max-w-4xl px-5 md:px-8">
@@ -114,7 +125,22 @@ export function JournalArticle({
           </div>
 
           <div className="mx-auto max-w-3xl px-5 py-12 md:px-8 md:py-16">
+            <aside className="mb-10 border-l-2 border-gold pl-5">
+              <h2 className="font-display text-xl font-light text-ink">In brief</h2>
+              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">{articleSummaries[post.slug]}</p>
+            </aside>
             <div className="journal-prose">{children}</div>
+
+            <aside className="mt-12 border-y border-border py-7">
+              <h2 className="font-display text-xl font-light text-ink">Sources and editorial note</h2>
+              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+                This educational guide is published by the Solaris university concept project. Brand facts are checked against official product pages; general fragrance context links to independent references. Editorial scent matches are suggestions, and performance varies by formula, application, skin and environment.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <a href={post.externalLink.href} className="underline underline-offset-4">{post.externalLink.label}</a>
+                <Link to="/about" className="underline underline-offset-4">About our sources</Link>
+              </div>
+            </aside>
 
             <aside className="mt-14 border border-border bg-card p-7">
               <p className="text-[0.58rem] uppercase tracking-[0.3em] text-gold">
@@ -125,7 +151,7 @@ export function JournalArticle({
               </p>
               <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
                 Eau de Parfum · 100 ML · Vanilla, sandalwood and amber. MRP ₹1,499, incl. of
-                all taxes.
+                all taxes. University concept; price is illustrative.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link

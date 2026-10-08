@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import unboundedFont from "../assets/unbounded-latin.woff2.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SITE_URL, projectPublisher } from "../content/site-seo";
 
 function NotFoundComponent() {
   return (
@@ -98,6 +99,25 @@ export const Route = createRootRoute({
         crossOrigin: "anonymous",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            projectPublisher,
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              name: "Sarkar Solaris concept project",
+              url: SITE_URL,
+              description: "A university fragrance concept and educational content hub inspired by the Sarkar brand.",
+              publisher: { "@id": `${SITE_URL}/#project` },
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

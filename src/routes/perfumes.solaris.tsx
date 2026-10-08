@@ -15,10 +15,12 @@ import throneImg from "@/assets/range-throne.webp";
 import orionImg from "@/assets/range-orion.webp";
 import nobleImg from "@/assets/range-noble.webp";
 import regalImg from "@/assets/range-regal.webp";
+import { ProjectLinks } from "@/components/project-links";
+import { breadcrumbs } from "@/content/site-seo";
 
 const TITLE = "Sarkar Solaris Perfume | Quiet. Golden. Commanding.";
 const DESCRIPTION =
-  "Discover Sarkar Solaris, a warm fragrance of vanilla, sandalwood and amber — composed, golden and quietly commanding.";
+  "Explore Sarkar Solaris, a university fragrance concept with vanilla, sandalwood and amber. Warm, woody and quietly commanding.";
 const SITE_URL = "https://sarkar-solaris.lovable.app";
 const URL_PATH = `${SITE_URL}/perfumes/solaris`;
 const HERO_URL = `${SITE_URL}${heroImg}`;
@@ -34,8 +36,6 @@ export const Route = createFileRoute("/perfumes/solaris")({
       { property: "og:type", content: "product" },
       { property: "og:url", content: URL_PATH },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: HERO_URL },
-      { name: "twitter:image", content: HERO_URL },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
@@ -62,13 +62,22 @@ export const Route = createFileRoute("/perfumes/solaris")({
           description: DESCRIPTION,
           image: HERO_URL,
           url: URL_PATH,
-          offers: {
-            "@type": "Offer",
-            price: "1499",
-            priceCurrency: "INR",
-            url: URL_PATH,
-          },
+          additionalProperty: [{
+            "@type": "PropertyValue",
+            name: "Project status",
+            value: "University assignment concept; not an officially launched Sarkar product",
+          }, {
+            "@type": "PropertyValue",
+            name: "Illustrative concept price",
+            value: "INR 1499, inclusive of taxes; not a commercial offer",
+          }],
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbs([
+          { name: "Solaris concept", path: "/perfumes/solaris" },
+        ])),
       },
     ],
   }),
@@ -82,7 +91,7 @@ const notes = [
     image: vanillaImg,
     alt: "Sarkar Solaris vanilla fragrance note — split vanilla pods lit by warm golden light",
     words: ["Warm", "Creamy", "Smooth"],
-    copy: "A creamy opening with no sugar in it, vanilla read as texture rather than sweetness.",
+    copy: "In the Solaris concept, vanilla is the top note. It suggests a warm, creamy opening, emphasizing texture rather than sugary sweetness.",
   },
   {
     tier: "Heart Notes",
@@ -90,7 +99,7 @@ const notes = [
     image: sandalwoodImg,
     alt: "Sarkar Solaris sandalwood fragrance note — polished sandalwood blocks and shavings",
     words: ["Woody", "Soft", "Grounded"],
-    copy: "Polished sandalwood settles the composition and holds it steady through the evening.",
+    copy: "In the Solaris concept, sandalwood is the heart note. It adds a soft, grounded woody character to the warm fragrance profile.",
   },
   {
     tier: "Base Notes",
@@ -98,7 +107,7 @@ const notes = [
     image: amberImg,
     alt: "Sarkar Solaris amber fragrance note — translucent golden amber resin on dark stone",
     words: ["Golden", "Deep", "Warm"],
-    copy: "Amber carries the golden depth, leaving a warm trail long after the room has changed.",
+    copy: "In the Solaris concept, amber is the base note. It represents golden depth and warmth; a lasting trail is a design intention, not a verified wear-time claim.",
   },
 ];
 
@@ -328,13 +337,15 @@ function SolarisPage() {
               </h2>
               <div className="rule-gold my-6 w-24" />
               <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
-                Sarkar has always spoken in absolutes. Solaris answers in a lower register.
-                The same command, carried by warmth instead of weight. Not loud power. Not
-                aggressive power. Quiet power, held in vanilla, sandalwood and amber.
+                Sarkar Solaris is a premium, unisex Eau de Parfum concept created for a
+                university assignment within the existing Sarkar brand system. Its three
+                notes are vanilla, sandalwood and amber, expressing quiet power through
+                warmth rather than aggression.
               </p>
               <p className="mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
-                It is the side of the Sarkar identity that arrives before you speak and stays
-                after you leave, without ever raising its voice.
+                The concept interprets the brand’s composed presence in a warmer light.
+                For the real brand’s story, see the{" "}
+                <a href="https://www.sarkar.store/pages/know-sarkar" className="underline underline-offset-4">official Sarkar introduction</a>.
               </p>
             </div>
           </div>
@@ -349,10 +360,10 @@ function SolarisPage() {
               </h2>
               <div className="rule-gold my-6 w-20" />
               <p className="text-sm font-light leading-relaxed text-muted-foreground">
-                Solaris opens with the soft sweetness of creamy vanilla, settles into the
-                smooth warmth of sandalwood and develops a rich golden depth through amber.
-                The vanilla is textural rather than sugary; the wood keeps it composed; the
-                amber gives it hours.
+                The Sarkar Solaris concept imagines a warm, creamy, woody scent: vanilla at
+                the opening, sandalwood at the heart and amber at the base. Vanilla is
+                presented as texture rather than sugary sweetness. This describes the
+                intended fragrance profile, not an independently tested formula or duration.
               </p>
               <ul className="mt-7 flex flex-wrap gap-2">
                 {["Warm", "Creamy", "Woody", "Golden", "Refined"].map((w) => (
@@ -503,6 +514,9 @@ function SolarisPage() {
               </p>
               <p className="mt-1 text-xs font-light text-muted-foreground">
                 Ships within 24–36 hours of ordering
+              </p>
+              <p className="mt-4 border-l-2 border-gold pl-4 text-xs font-light leading-relaxed text-muted-foreground">
+                University concept prototype. Solaris is not an officially launched Sarkar product; price, shipping and checkout are illustrative.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -679,6 +693,7 @@ function SolarisPage() {
               Parfum built for quiet, absolute presence. Solaris is a concept variant created
               for a university assignment within the Sarkar brand system.
             </p>
+            <ProjectLinks />
           </div>
           <nav aria-label="Footer">
             <p className="text-[0.58rem] uppercase tracking-[0.28em] text-muted-foreground">
@@ -706,6 +721,11 @@ function SolarisPage() {
               <li>
                 <Link to="/blog" className="text-xs font-light text-ink">
                   Blogs
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-xs font-light text-ink">
+                  About &amp; sources
                 </Link>
               </li>
 
