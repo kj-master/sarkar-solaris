@@ -1,4 +1,5 @@
-- [ ] Add the supplied AI-readable reference at /llms.txt with blog links.
-- [ ] Improve truthful provenance, sources, brand links, citability and structured data without redesign.
-- [ ] Verify public SEO resources, page metadata and navigation.
-- [ ] Apply required package security update.
+- [x] Add a concise /llms.txt guide with blog links and preserve the complete supplied reference at /llms-full.txt.
+- [x] Improve provenance, source links, citations, editorial attribution, concept disclosures and structured data while preserving the existing visual design.
+- [x] Verify all seven public content pages, head metadata, JSON-LD, source navigation and public SEO resources; no browser errors, latest build OK.
+- [x] Apply required package security update and its minimal compatibility adjustment.
+- [ ] Real individual author credentials, independent reviews, first-hand testing and press coverage: require genuine evidence from the project owner; nothing fabricated.
