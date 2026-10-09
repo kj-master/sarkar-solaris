@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import { SiteHeader, SiteFooter, RangeStrip } from "@/components/site-chrome";
 import { posts, type BlogPost, SITE_URL, SHOP_URL } from "@/content/blog";
-import { articleSummaries, breadcrumbs, projectPublisher } from "@/content/site-seo";
+import { articleSummaries, breadcrumbs, projectPublisher, authorPerson, AUTHOR_BYLINE } from "@/content/site-seo";
 
 export function articleHead(post: BlogPost) {
   const url = `${SITE_URL}/blog/${post.slug}`;
@@ -33,7 +33,7 @@ export function articleHead(post: BlogPost) {
           image: [image],
           datePublished: post.datePublished,
           dateModified: post.dateModified,
-          author: projectPublisher,
+          author: authorPerson,
           publisher: projectPublisher,
           articleSection: post.category,
           abstract: articleSummaries[post.slug],
@@ -98,7 +98,7 @@ export function JournalArticle({
             </h1>
             <div className="rule-gold my-7 w-28" />
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-light text-muted-foreground">
-              <span>By Solaris concept project</span>
+              <span>{AUTHOR_BYLINE}</span>
               <span>Published <time dateTime={post.datePublished}>{post.datePublished}</time></span>
               <span>Updated <time dateTime={post.dateModified}>{post.dateModified}</time></span>
             </div>

@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import unboundedFont from "../assets/unbounded-latin.woff2.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SITE_URL, projectPublisher } from "../content/site-seo";
+import { SITE_URL, projectOrganization, authorPerson } from "../content/site-seo";
 
 function NotFoundComponent() {
   return (
@@ -107,7 +107,8 @@ export const Route = createRootRoute({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
-            projectPublisher,
+            projectOrganization,
+            authorPerson,
             {
               "@type": "WebSite",
               "@id": `${SITE_URL}/#website`,

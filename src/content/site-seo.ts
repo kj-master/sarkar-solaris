@@ -72,7 +72,7 @@ export const brandReferences = [
 ];
 
 // TODO: no dedicated project logo file exists; favicon is used until a real logo (with true dimensions) is supplied.
-export const projectLogo = { "@type": "ImageObject", url: `${SITE_URL}/favicon.ico`, width: 48, height: 48 };
+export const projectLogo = { "@type": "ImageObject", url: `${SITE_URL}/favicon.ico`, width: 256, height: 256 };
 
 export const projectOrganization = {
   ...projectPublisher,
