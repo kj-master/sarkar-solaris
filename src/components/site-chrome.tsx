@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
+import { ProjectLinks } from "@/components/project-links";
+
 import nobleImg from "@/assets/range-noble.webp";
 import orionImg from "@/assets/range-orion.webp";
 import regalImg from "@/assets/range-regal.webp";
@@ -112,6 +114,7 @@ export function SiteFooter() {
             Parfum built for quiet, absolute presence. Solaris is a concept variant created
             for a university assignment within the Sarkar brand system.
           </p>
+          <ProjectLinks />
         </div>
         <nav aria-label="Footer">
           <p className="text-[0.58rem] uppercase tracking-[0.28em] text-muted-foreground">
