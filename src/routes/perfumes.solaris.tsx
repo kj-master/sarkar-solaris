@@ -16,7 +16,25 @@ import orionImg from "@/assets/range-orion.webp";
 import nobleImg from "@/assets/range-noble.webp";
 import regalImg from "@/assets/range-regal.webp";
 import { ProjectLinks } from "@/components/project-links";
-import { breadcrumbs } from "@/content/site-seo";
+import { breadcrumbs, authorPerson, bhuvanBamPerson, projectPublisher, AUTHOR_BYLINE, AUTHOR_BIO, BRAND_DISCLAIMER, PUBLISHED_DATE, UPDATED_DATE, formatDate } from "@/content/site-seo";
+
+const faqs = [
+  ["What is Sarkar Solaris?", "Sarkar Solaris is an independent university concept for a 100 ml Eau de Parfum built around vanilla, sandalwood and amber. It was created by Kanan Jain as a brand-extension study inspired by the Sarkar fragrance brand. It is a concept prototype, not an official Sarkar product, and it is not affiliated with or endorsed by Sarkar or Bhuvan Bam."],
+  ["What does Sarkar Solaris smell like?", "Sarkar Solaris is designed to smell warm, creamy and woody. You would first notice smooth vanilla, then soft sandalwood, settling into a golden amber base. The brief was quiet confidence: a scent that feels composed and refined rather than loud or sugary. This describes the intended profile of the concept, not a lab-tested formula."],
+  ["What are the notes in Sarkar Solaris?", "Sarkar Solaris has a simple three-tier note pyramid. The top note is vanilla, the heart note is sandalwood and the base note is amber. There are no other listed notes. Keeping the pyramid to three materials was a deliberate choice so each one stays easy to recognise."],
+  ["Who is Sarkar Solaris for?", "Sarkar Solaris is positioned as a unisex fragrance for you if you prefer warm, woody scents over fresh or citrus ones. The concept suits evening dinners, cooler rooftop evenings and special occasions where you want presence without projection that feels performed."],
+  ["How much does Sarkar Solaris cost?", "The Solaris page shows an illustrative MRP of ₹1,499 for 100 ml, inclusive of all taxes. That price was set to sit alongside the existing Sarkar range for the assignment. Because Solaris is a concept prototype, you cannot actually buy it and no payment is taken."],
+  ["How long does shipping take?", "The concept page states that orders ship within 24–36 hours of ordering. That dispatch window is illustrative and models a typical fragrance store. Since Sarkar Solaris is a university prototype, nothing is shipped. For real Sarkar orders, use the official Sarkar shipping policy."],
+  ["Is Sarkar Solaris an official Sarkar perfume?", "No. Sarkar Solaris is an independent university concept inspired by the Sarkar fragrance brand by Bhuvan Bam. It is not affiliated with, endorsed by or operated by Bhuvan Bam or the official brand. For real Sarkar products, visit sarkar.store."],
+] as const;
+
+const sources = [
+  { lead: "According to Encyclopaedia Britannica,", text: "perfumes are built from top, middle and base notes that evaporate at different rates.", label: "Britannica: Perfume", href: "https://www.britannica.com/art/perfume" },
+  { lead: "According to Britannica,", text: "vanilla flavour and aroma come from the cured pods of the vanilla orchid.", label: "Britannica: Vanilla", href: "https://www.britannica.com/plant/vanilla" },
+  { lead: "According to Britannica,", text: "sandalwood oil is distilled from the fragrant heartwood of the sandalwood tree.", label: "Britannica: Sandalwood", href: "https://www.britannica.com/plant/sandalwood" },
+  { lead: "According to Britannica,", text: "true amber is fossilised tree resin; in perfumery, amber usually describes a warm, resinous accord.", label: "Britannica: Amber", href: "https://www.britannica.com/science/amber" },
+  { lead: "According to the International Fragrance Association (IFRA),", text: "fragrance ingredients are governed by industry safety standards.", label: "IFRA: Standards", href: "https://ifrafragrance.org/safe-use/introduction" },
+];
 
 const TITLE = "Sarkar Solaris Perfume | Quiet. Golden. Commanding.";
 const DESCRIPTION =
@@ -62,6 +80,22 @@ export const Route = createFileRoute("/perfumes/solaris")({
           description: DESCRIPTION,
           image: HERO_URL,
           url: URL_PATH,
+          sku: "SARKAR-SOLARIS-100ML-CONCEPT",
+          author: authorPerson,
+          mentions: bhuvanBamPerson,
+          datePublished: PUBLISHED_DATE,
+          offers: {
+            "@type": "Offer",
+            price: "1499",
+            priceCurrency: "INR",
+            // Concept prototype: shown as OutOfStock because it cannot actually be bought.
+            availability: "https://schema.org/OutOfStock",
+            itemCondition: "https://schema.org/NewCondition",
+            priceValidUntil: "2026-12-31",
+            url: `${URL_PATH}#buy`,
+            seller: projectPublisher,
+          },
+          // TODO: add AggregateRating/Review only if real reviews exist.
           additionalProperty: [{
             "@type": "PropertyValue",
             name: "Project status",
@@ -71,6 +105,26 @@ export const Route = createFileRoute("/perfumes/solaris")({
             name: "Illustrative concept price",
             value: "INR 1499, inclusive of taxes; not a commercial offer",
           }],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: TITLE,
+          url: URL_PATH,
+          datePublished: PUBLISHED_DATE,
+          dateModified: UPDATED_DATE,
+          author: authorPerson,
         }),
       },
       {
@@ -91,7 +145,7 @@ const notes = [
     image: vanillaImg,
     alt: "Sarkar Solaris vanilla fragrance note — split vanilla pods lit by warm golden light",
     words: ["Warm", "Creamy", "Smooth"],
-    copy: "In the Solaris concept, vanilla is the top note. It suggests a warm, creamy opening, emphasizing texture rather than sugary sweetness.",
+    copy: "Vanilla is the top note of Sarkar Solaris, so it is the first thing you notice. It gives the concept a warm, creamy opening that reads as smooth texture rather than sugary sweetness, setting a calm, confident tone before the sandalwood heart and amber base take over.",
   },
   {
     tier: "Heart Notes",
@@ -277,8 +331,10 @@ function SolarisPage() {
               </p>
               <div className="rule-gold my-7 w-32" />
               <p className="max-w-md text-sm font-light leading-relaxed text-muted-foreground">
-                Vanilla, sandalwood and amber come together in a warm, composed trail, a
-                radiant expression of power that never needs to announce itself.
+                Sarkar Solaris is a 100 ml Eau de Parfum concept where vanilla, sandalwood
+                and amber come together in a warm, composed trail, a radiant expression of
+                power that never needs to announce itself. It is an independent university
+                prototype inspired by the Sarkar range, shown at an illustrative ₹1,499.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <button
@@ -356,14 +412,15 @@ function SolarisPage() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:gap-20 md:px-8 md:py-24">
             <article>
               <h2 className="font-display text-2xl font-light leading-tight text-ink md:text-3xl">
-                What Solaris Smells Like
+                What does Sarkar Solaris smell like?
               </h2>
               <div className="rule-gold my-6 w-20" />
               <p className="text-sm font-light leading-relaxed text-muted-foreground">
-                The Sarkar Solaris concept imagines a warm, creamy, woody scent: vanilla at
-                the opening, sandalwood at the heart and amber at the base. Vanilla is
-                presented as texture rather than sugary sweetness. This describes the
-                intended fragrance profile, not an independently tested formula or duration.
+                Sarkar Solaris smells warm, creamy and woody. You meet smooth vanilla first,
+                then soft sandalwood, and finally a golden amber base. The vanilla is meant to
+                feel like texture rather than sugar, so the scent reads composed instead of
+                sweet. This is the intended profile of a university concept, not an
+                independently tested formula or a promised wear time.
               </p>
               <ul className="mt-7 flex flex-wrap gap-2">
                 {["Warm", "Creamy", "Woody", "Golden", "Refined"].map((w) => (
@@ -379,12 +436,12 @@ function SolarisPage() {
 
             <article>
               <h2 className="font-display text-2xl font-light leading-tight text-ink md:text-3xl">
-                Made for the Moments That Matter
+                Who is Sarkar Solaris for?
               </h2>
               <div className="rule-gold my-6 w-20" />
               <p className="text-sm font-light leading-relaxed text-muted-foreground">
-                A warm amber composition sits best when the light is low and the room is
-                considered.
+                Solaris is a unisex concept for you if you prefer warm, woody scents over
+                fresh ones. It suits low light and considered rooms.
               </p>
               <dl className="mt-7 divide-y divide-border border-y border-border">
                 {[
@@ -412,10 +469,10 @@ function SolarisPage() {
                 Composition
               </p>
               <h2 className="mt-4 font-display text-3xl font-light leading-tight text-ink md:text-4xl">
-                The Fragrance Notes
+                What are the notes in Sarkar Solaris?
               </h2>
               <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
-                {"\n"}
+                Top: vanilla. Heart: sandalwood. Base: amber.
               </p>
             </div>
 
@@ -560,7 +617,7 @@ function SolarisPage() {
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <h2 className="font-display text-3xl font-light leading-tight text-ink md:text-4xl">
-                What They Say
+                What do people say about Solaris?
               </h2>
               <p className="text-[0.56rem] uppercase tracking-[0.28em] text-muted-foreground">
                 Illustrative customer feedback · concept prototype
