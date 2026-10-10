@@ -37,7 +37,7 @@ export function infoHead(opts: { path: string; title: string; description: strin
         children: JSON.stringify(
           breadcrumbs([
             { name: "Solaris", path: "/perfumes/solaris" },
-            { name: opts.title.split(" | ")[0], path: opts.path },
+            { name: opts.title.split(" | ")[0] ?? opts.title, path: opts.path },
           ]),
         ),
       },
