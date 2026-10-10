@@ -508,6 +508,45 @@ function SolarisPage() {
           </div>
         </section>
 
+        {/* AUTHOR + SOURCES */}
+        <section className="border-b border-border">
+          <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:gap-20 md:px-8 md:py-20">
+            <div>
+              <h2 className="font-display text-2xl font-light leading-tight text-ink md:text-3xl">
+                How was Sarkar Solaris developed?
+              </h2>
+              <div className="rule-gold my-6 w-20" />
+              <p className="text-sm font-light leading-relaxed text-muted-foreground">{AUTHOR_BYLINE}.</p>
+              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">{AUTHOR_BIO}</p>
+              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
+                The brief was a warmer expression of Sarkar's quiet authority: three recognisable
+                notes, no citrus or spice, and a bottle kept identical to the existing range with
+                only a golden tint. {BRAND_DISCLAIMER}
+              </p>
+              <p className="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-xs text-muted-foreground">
+                <span>Published: <time dateTime={PUBLISHED_DATE}>{formatDate(PUBLISHED_DATE)}</time></span>
+                <span>Last updated: <time dateTime={UPDATED_DATE}>{formatDate(UPDATED_DATE)}</time></span>
+              </p>
+            </div>
+            <div>
+              <h2 className="font-display text-2xl font-light leading-tight text-ink md:text-3xl">
+                Sources &amp; references
+              </h2>
+              <div className="rule-gold my-6 w-20" />
+              <ul className="space-y-4">
+                {sources.map((src) => (
+                  <li key={src.href} className="text-sm font-light leading-relaxed text-muted-foreground">
+                    {src.lead} {src.text}{" "}
+                    <a href={src.href} target="_blank" rel="noopener" className="underline underline-offset-4 hover:text-ink">
+                      {src.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* CAMPAIGN */}
         <section className="border-b border-border">
           <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
@@ -573,7 +612,7 @@ function SolarisPage() {
                 Ships within 24–36 hours of ordering
               </p>
               <p className="mt-4 border-l-2 border-gold pl-4 text-xs font-light leading-relaxed text-muted-foreground">
-                University concept prototype. Solaris is not an officially launched Sarkar product; price, shipping and checkout are illustrative.
+                Sarkar Solaris is a 100 ml Eau de Parfum concept with a vanilla top, sandalwood heart and amber base, shown at an illustrative MRP of ₹1,499 including taxes with a 24–36 hour dispatch window. It is a university concept prototype, not an officially launched Sarkar product, so price, shipping and checkout are demonstrations only.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -708,6 +747,24 @@ function SolarisPage() {
                     </a>
                   </div>
                 </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="border-b border-border scroll-mt-20">
+          <div className="mx-auto max-w-3xl px-5 py-16 md:px-8 md:py-24">
+            <h2 className="font-display text-3xl font-light leading-tight text-ink md:text-4xl">
+              Frequently asked questions
+            </h2>
+            <div className="rule-gold my-6 w-24" />
+            <div className="divide-y divide-border border-y border-border">
+              {faqs.map(([q, a]) => (
+                <div key={q} className="py-6">
+                  <h3 className="font-display text-lg font-light text-ink">{q}</h3>
+                  <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">{a}</p>
+                </div>
               ))}
             </div>
           </div>
