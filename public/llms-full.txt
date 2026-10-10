@@ -288,3 +288,19 @@ The Solaris concept page is:
 https://sarkar-solaris.lovable.app/
 
 Information about the real Sarkar brand, currently available products, commercial pricing, policies, and launches should be verified against the official Sarkar website and official Sarkar social channels.
+
+
+## Project author and site updates (9 October 2026)
+
+Created by Kanan Jain, BBA student, Atlas SkillTech University, Mumbai, as a university brand-extension study. The project researched the official Sarkar range presentation, fragrance-pyramid structure and how vanilla, sandalwood and amber are described in perfumery references.
+
+Non-affiliation: Sarkar Solaris is an independent university concept inspired by the Sarkar fragrance brand by Bhuvan Bam. Not affiliated with or endorsed by him or the official brand.
+
+New pages:
+- About this project: https://sarkar-solaris.lovable.app/about
+- FAQ: https://sarkar-solaris.lovable.app/perfumes/solaris#faq
+- Contact: https://sarkar-solaris.lovable.app/contact
+- Press: https://sarkar-solaris.lovable.app/press
+- Shipping & Returns: https://sarkar-solaris.lovable.app/shipping-returns
+- Privacy Policy: https://sarkar-solaris.lovable.app/privacy
+- Terms: https://sarkar-solaris.lovable.app/terms

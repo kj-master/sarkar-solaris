@@ -1,7 +1,7 @@
 export const SITE_URL = "https://sarkar-solaris.lovable.app";
 export const PROJECT_NAME = "Solaris concept project";
 export const PROJECT_ID = `${SITE_URL}/#project`;
-export const UPDATED_DATE = "2026-10-08";
+export const UPDATED_DATE = "2026-10-09";
 
 export const projectPublisher = {
   "@type": "Organization",

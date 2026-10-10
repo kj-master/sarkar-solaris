@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { SITE_URL, projectPublisher, breadcrumbs, UPDATED_DATE } from "@/content/site-seo";
+import { SITE_URL, projectPublisher, breadcrumbs, UPDATED_DATE, PUBLISHED_DATE, AUTHOR_BYLINE, AUTHOR_BIO, BRAND_DISCLAIMER, brandReferences, authorPerson, formatDate } from "@/content/site-seo";
 
 const title = "About Solaris | Concept Project & Editorial Sources";
 const description = "Who is behind the Solaris university concept, how the fragrance guides use sources, and where to verify official Sarkar product information.";
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/about")({
     links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
     scripts: [{ type: "application/ld+json", children: JSON.stringify({
       "@context": "https://schema.org", "@type": "AboutPage", name: title,
-      url: `${SITE_URL}/about`, description, dateModified: UPDATED_DATE,
+      url: `${SITE_URL}/about`, description, datePublished: PUBLISHED_DATE, dateModified: UPDATED_DATE, author: authorPerson,
       mainEntity: projectPublisher,
     }) }, { type: "application/ld+json", children: JSON.stringify(breadcrumbs([
       { name: "Solaris", path: "/perfumes/solaris" }, { name: "About this project", path: "/about" },
@@ -32,11 +32,17 @@ function AboutPage() {
       <main className="mx-auto max-w-3xl px-5 py-14 md:px-8 md:py-20">
         <p className="text-xs uppercase text-gold">Solaris concept project</p>
         <h1 className="mt-5 font-display text-3xl font-light leading-tight text-ink md:text-5xl">About this project</h1>
-        <p className="mt-5 text-xs text-muted-foreground">Updated <time dateTime={UPDATED_DATE}>8 October 2026</time></p>
+        <p className="mt-5 text-sm font-light text-ink">{AUTHOR_BYLINE}</p>
+        <p className="mt-2 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">{AUTHOR_BIO}</p>
+        <p className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-muted-foreground"><span>Published: <time dateTime={PUBLISHED_DATE}>{formatDate(PUBLISHED_DATE)}</time></span><span>Last updated: <time dateTime={UPDATED_DATE}>{formatDate(UPDATED_DATE)}</time></span></p>
         <div className="rule-gold my-7 w-28" />
         <div className="journal-prose">
           <h2>What is Sarkar Solaris?</h2>
           <p>Sarkar Solaris is a university-assignment fragrance concept inspired by the existing Sarkar brand system. It is presented as a premium, unisex 100 ML Eau de Parfum with vanilla, sandalwood and amber. This website is not the official Sarkar ecommerce store, and Solaris is not presented as an officially launched product.</p>
+          <h2>About this project statement</h2>
+          <p>{BRAND_DISCLAIMER} Everything on this site, including the price, cart and shipping message, is a concept prototype.</p>
+          <h2>How was the concept developed?</h2>
+          <p>The brief was to extend the Sarkar range with a warmer variant without redesigning anything. Kanan Jain studied the official Sarkar product pages for Throne, Orion, Noble and Regal, read general perfumery references on how note pyramids work, and narrowed the scent to three materials: vanilla, sandalwood and amber. The bottle was kept identical to the existing design, changed only by a subtle golden tint, and the name Solaris was chosen to express warmth and calm authority.</p>
           <h2>Who publishes these guides?</h2>
           <p>The fragrance guides are published as part of the Solaris concept project. They are educational editorial content, not statements issued by the official Sarkar brand. No professional perfumery credentials, independent laboratory testing or firsthand product wear trials are claimed.</p>
           <h2>How we use sources</h2>
@@ -64,6 +70,14 @@ function AboutPage() {
             <li><a href="https://www.sarkar.store/pages/refund-policy">Official store refund policy</a></li>
             <li><a href="https://www.sarkar.store/pages/privacy-policy">Official store privacy policy</a></li>
           </ul>
+          <h2>Brand inspiration &amp; references</h2>
+          <p>{BRAND_DISCLAIMER}</p>
+          <ul>
+            {brandReferences.map((r) => (
+              <li key={r.href}><a href={r.href} target="_blank" rel="noopener nofollow">{r.label}</a></li>
+            ))}
+          </ul>
+          <p>See also <Link to="/contact">Contact</Link>, <Link to="/press">Press</Link>, <Link to="/shipping-returns">Shipping &amp; Returns</Link>, <Link to="/privacy">Privacy Policy</Link> and <Link to="/terms">Terms</Link>.</p>
           <h2>Explore the project</h2>
           <p><Link to="/perfumes/solaris">Explore the Solaris concept</Link> or read the <Link to="/blog">fragrance guides</Link>. An <a href="/llms.txt">AI-readable reference</a> distinguishes the concept from the official brand and links to the project’s key pages.</p>
         </div>
