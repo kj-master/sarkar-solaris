@@ -662,6 +662,12 @@ function SolarisPage() {
                 Illustrative customer feedback · concept prototype
               </p>
             </div>
+            <p className="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted-foreground">
+              These quotes are illustrative customer feedback written for the concept prototype,
+              not verified reviews. They show how the brief intends Solaris to be described: creamy
+              vanilla rather than sugary, sandalwood that keeps it composed, and an amber base that
+              feels golden and close to the skin. No real customer has worn Sarkar Solaris.
+            </p>
             <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {reviews.map((r) => (
                 <article
