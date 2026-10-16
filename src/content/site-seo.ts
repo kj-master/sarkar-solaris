@@ -57,6 +57,11 @@ export const bhuvanBamPerson = {
   "@id": `${SITE_URL}/#bhuvan-bam-reference`,
   name: "Bhuvan Bam",
   url: "https://en.wikipedia.org/wiki/Bhuvan_Bam",
+  sameAs: [
+    "https://en.wikipedia.org/wiki/Bhuvan_Bam",
+    "https://www.instagram.com/bhuvan.bam22/",
+    "https://www.youtube.com/channel/UCqwUrj10mAEsqezcItqvwEw",
+  ],
 };
 
 export const BRAND_DISCLAIMER =
