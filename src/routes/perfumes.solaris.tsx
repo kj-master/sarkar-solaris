@@ -26,6 +26,7 @@ const faqs = [
   ["How much does Sarkar Solaris cost?", "The Solaris page shows an illustrative MRP of ₹1,499 for 100 ml, inclusive of all taxes. That price was set to sit alongside the existing Sarkar range for the assignment. Because Solaris is a concept prototype, you cannot actually buy it and no payment is taken."],
   ["How long does shipping take?", "The concept page states that orders ship within 24–36 hours of ordering. That dispatch window is illustrative and models a typical fragrance store. Since Sarkar Solaris is a university prototype, nothing is shipped. For real Sarkar orders, use the official Sarkar shipping policy."],
   ["Is Sarkar Solaris an official Sarkar perfume?", "No. Sarkar Solaris is an independent university concept inspired by the Sarkar fragrance brand by Bhuvan Bam. It is not affiliated with, endorsed by or operated by Bhuvan Bam or the official brand. For real Sarkar products, visit sarkar.store."],
+  ["Where can I find official information about Sarkar perfumes?", "Official information about Sarkar perfumes, including the Throne, Orion, Noble and Regal fragrances, prices and policies, is published on the official Sarkar website at sarkar.store and on the official Instagram account @houseofsarkar."],
 ] as const;
 
 const sources = [
@@ -53,6 +54,11 @@ export const Route = createFileRoute("/perfumes/solaris")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "product" },
       { property: "og:url", content: URL_PATH },
+      { property: "og:image", content: `${SITE_URL}/og-solaris.jpg` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Sarkar Solaris chess-king perfume bottle with golden amber glass" },
+      { name: "twitter:image", content: `${SITE_URL}/og-solaris.jpg` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
